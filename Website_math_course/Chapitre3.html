@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 3</title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch3"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo3">Exercice chapitre 3</a>
+
+			<h1>Chapitre 3 : Fonctions trigonométriques</h1>
+			
+			<h2>Définition et rappels</h2>
+			<ul>
+				<li>La foncotion sinus, notée \(\sin\) est la fonction définie sur \(\mathbb{R}\) par \(x \mapsto \sin x\).</li>
+				<li>La foncotion cosinus, notée \(\cos\) est la fonction définie sur \(\mathbb{R}\) par \(x \mapsto \cos x\).</li>
+			</ul>
+			<p>Ce cercle trigonométrique rassemble certaines valeurs des fonctions sinus et cosinus :</p>
+			<img src="cercle_trigo.png" alt="cercle trigonométrique" width="500"/>
+			<h2>Fonctions péridodiques, paires et impaires.</h2>
+			<fieldset>
+				<p>Soit f une fonction définie sur \(\mathbb{R}\) et \(T\) un réel. On dit que \(f\) est <strong>périodique de période T</strong> ou <strong>T-périodique</strong> si pour tout réel \(x\), \(f(x + T) = f(x)\).</p>
+				<p>\(f\) est paire si, pour tout réél \(x\), \(f(-x) = f(x)\) et impaire si \(f(-x) = -f(x)\).</p>
+				<p> Les fonctions sinus et cosinus sont 2\(\pi\)-péridodiques car, \(\forall x \in \mathbb{R},~ \sin(x + 2\pi) = \sin x\) et \(\cos(x + 2\pi) = \cos x\). De plus, la fonction sinus est impaire (\(\forall x \in \mathbb{R},~ \sin(-x) = \sin x\)) tandis que la fonction cosinus est paire (\(\forall x \in \mathbb{R},~ \cos(-x) = \cos x\)).</p>
+			</fieldset>
+			<h3>Graphique des fonctions sinus et cosinus sur l'intervalle \([0,2\pi]\):</h3>
+			<a class="img" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sine_cosine_one_period.svg/900px-Sine_cosine_one_period.svg.png"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sine_cosine_one_period.svg/900px-Sine_cosine_one_period.svg.png" alt="graphique des fonctions sinus et cosinus" title="graphique des fonctions sinus et cosinus" width=500 /></a>
+			<h2>Continuité et dérivabilité</h2>
+			<fieldset>
+				<p>Les fonctions sinus et cosinus sont continues et dérivables sur \(\mathbb{R}\).On a :</p>
+				<ul>
+					<li>\(\sin'(x) = \cos x\)</li>
+					<li>\(\cos'(x) = -\sin x\)</li>
+					<li>\(\sin'(ax + b) = a\cos x\)</li>
+					<li>\(\cos'(ax + b) = -a\sin x\)</li>
+				</ul>
+			</fieldset>
+
+			<h2>Limites de fonctions trigonométriques</h2>
+			<p>Les fonctions sinus et cosinus n'ont pas de limite en \(+\infty\) et \(-\infty\) mais on a les limites suivantes :</p>
+			<ul class="aligne">
+				<li>\({\displaystyle \lim_{n \to 0} \frac{\sin x}{x} = 1}\)</li>
+			</ul>
+			<ul class="aligne">
+				<li>\({\displaystyle \lim_{n \to 0} \frac{\cos x - 1}{x} = 0}\)</li>
+			</ul>
+
+			<br/><br/><br/>
+
+			<h2>Formules de trigonométrie à savoir</h2>
+			<table class="formules">
+				<thead>
+					<tr>
+						<th>Décalage de \(\pi\)</th>
+						<th>Réflexion d'axe \(\pi\)</th>
+						<th>Réflexion d'axe \(\displaystyle \frac{\pi}{2}\)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>\(\cos(\pi + x) = -\cos x\)</td>
+						<td>\(\cos(\pi - x) = -\cos x\)</td>
+						<td>\(\cos(\frac{\pi}{2} - x) = \sin x\)</td>
+					</tr>
+					<tr>
+						<td>\(\sin(\pi + x) = -\sin x\)</td>
+						<td>\(\sin(\pi - x) = \sin x\)</td>
+						<td>\(\sin(\frac{\pi}{2} - x) = \cos x\)</td>
+					</tr>
+				<tbody>
+			</table>
+			<table class="formules">
+				<tr>
+					<th>Formule d'addition</th>
+					<th>Théorème de Pythagore</th>	
+				</tr>
+				<tr>
+					<td>\(\cos(a + b) = \cos a \cos b - \sin a \sin b \Rightarrow \cos(2a) = \cos^2 a - \sin^2 a\)</td>
+					<td>\(\cos^2 x +\sin^2 x = 1\)</td>
+				</tr>
+				<tr>				
+					<td>\(\cos(a - b) = \cos a \cos b + \sin a \sin b\)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>\(\sin(a + b) = \cos a \sin b + \cos b \sin a \Rightarrow \sin(2a) = 2\sin a \cos a\)</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>\(\sin(a - b) = \sin a \cos b - \sin b \cos a\)</td>
+					<td></td>
+				</tr>
+			</table>
+
+			<hr>
+
+			<a href="#ch3">Revenir en haut de la page</a>
+
+			<h1 id="exo3">Exercices d'application du chapitre 3 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<p>La fonction tangente définie par \(\tan x = {\displaystyle \frac{\sin x}{cos x}}\) est une fonction : </p>
+						<input type="checkbox" id="paire" name="paire">
+  						<label for="paire">paire</label>
+  						<input type="checkbox" id="impaire" name="impaire">
+  						<label for="impaire">impaire</label>
+  						<input type="checkbox" id="pi" name="pi">
+  						<label for="pi">\(\pi\)-périodique</label>
+  						<input type="checkbox" id="2pi" name="2pi">
+  						<label for="2pi">\(2\pi\)-périodique</label>
+  					</li>
+  					<li>
+  						<label for="tan">Que vaut \(\tan(\frac{3\pi}{4})\) ?</label>
+  						<input type="text" name="tan" id="tan" size="5">
+  					</li>
+  					<li>
+  						<p>Quelle est la dérivée de \(\cos(7x) \cos(3x) + \sin(3x) \sin(7x)\) ?</p>
+  						<select name="cos" id="cos">
+  							<option value="rep1">\(-21 \times (\sin(10x)+\cos(10x))\)</option>
+  							<option value="rep2">\(21 \times (\sin(7x) \cos(3x) + \cos(3x) \cos(7x)\)</option>
+  							<option value="rep3">\(\sin(4x)\)</option>
+  							<option value="rep4">\(-4 \times sin(4x)\)</option>
+  							<option value="rep5">\(-10 \times sin(10x)\)</option>
+  						</select>
+  					</li>
+  				</ol>
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>La fonction tangente est paire et \(\pi\)-périodique (donc aussi \(2\pi\)-périodique).</li>
+						<li>\(\tan(\frac{3\pi}{4}) = {\displaystyle \frac{\sin(\frac{3\pi}{4})}{\cos(\frac{3\pi}{4})}) = \frac{\sqrt{2}/2}{-\sqrt{2}/2}} = -1 \).</li>
+						<li>\(-4 \times sin(4x)\) (pensez à utiliser la formule \(\cos(a - b) = \cos a \cos b + \sin a \sin b\) !)</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

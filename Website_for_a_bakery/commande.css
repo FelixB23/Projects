@@ -1,0 +1,279 @@
+body
+{
+	background-image:linear-gradient(orange, rgb(255,200,100));
+}
+
+#commande
+{
+	color:yellow;
+}
+
+h1
+{
+	text-decoration: underline;
+	color:rgb(255,0,80);
+	font-size: 40pt;
+	font-family: cursive;
+	text-align: center;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
+
+p
+{
+	font-size:2rem;
+	font-style:oblique;
+	font-family: "Times New Roman",Times,Serif;
+}
+
+legend
+{
+	font-size:2rem;
+	font-style:oblique;
+	font-family: "Times New Roman",Times,Serif;
+}
+
+td
+{
+	height:200pt;
+	width:300pt;
+	text-align: center;
+	padding-left: 20pt;
+	padding-right: 20pt;
+	font-family: Arial;
+	font-size:26pt;
+	color:red;
+	border-radius: 40pt;
+	border:skyblue solid 1pt;
+}
+
+output
+{
+	border: 2px solid black;
+	padding: 5pt;
+	color:purple;
+	font-size: 24pt;
+	font-family: cursive;
+}
+
+td:hover
+{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	opacity: 0.75;
+	font-weight: bold;
+	font-family: cursive;
+}
+
+input
+{
+	border:darkorange 4pt ridge;
+	padding: 4pt
+}
+
+#bagord:hover
+{
+
+	background:url("https://live.staticflickr.com/8420/9023500355_77ebd1e218_b.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#croi:hover
+{
+	background:url("https://live.staticflickr.com/5750/22765051585_eca33b7a3c_b.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#eclair:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2014/10/15/15/08/eclair-489727_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#bagcom:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2015/01/10/16/01/bread-595436_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#painchoc:hover
+{
+	background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/2016-08_Pains_au_chocolat_02.jpg/800px-2016-08_Pains_au_chocolat_02.jpg") no-repeat;
+	background-size:340pt;
+}
+
+
+#rel:hover
+{
+	background:url("https://upload.wikimedia.org/wikipedia/commons/5/53/Religieuses_au_chocolat.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#rel:hover
+{
+	background:url("https://upload.wikimedia.org/wikipedia/commons/5/53/Religieuses_au_chocolat.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#paingr:hover
+{
+	background:url("https://images.pexels.com/photos/209194/pexels-photo-209194.jpeg") no-repeat;
+	background-size:340pt;
+}
+
+#chausson:hover
+{
+	background:url("https://live.staticflickr.com/4066/4372443604_bc16660908_b.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#m-f:hover
+{
+	background:url("https://upload.wikimedia.org/wikipedia/commons/4/44/Mille-feuille_fran%C3%A7ais_1.jpg") no-repeat;
+	background-size:385pt;
+}
+
+#painb:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2014/03/10/08/05/ciabatta-284345_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#painr:hover
+{
+	background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRaXbZudrH9ed5J9fNgJMBEQBoDMjTFYwksL0bEzM3NLoik9pyo") no-repeat;
+	background-size:340pt;
+}
+
+#tart:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2016/06/07/18/51/tart-1442275_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#boule:hover
+{
+	background:url("https://live.staticflickr.com/4021/4372452754_0877af3154_b.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#cook:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2019/06/01/21/02/cookie-4245030_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#tartp:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2018/06/03/12/31/apple-pie-3450349_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#painm:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2016/10/26/01/08/bread-1770432_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#muf:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2019/08/25/17/56/muffin-4430010_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#flan:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2017/01/06/17/18/caramel-1958358_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#mie:hover
+{
+	background:url("https://upload.wikimedia.org/wikipedia/commons/1/1c/Pain_de_mie.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#bri:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2016/11/09/15/06/brioche-1811926_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+#fondant:hover
+{
+	background:url("https://cdn.pixabay.com/photo/2014/02/10/14/15/cake-263459_960_720.jpg") no-repeat;
+	background-size:340pt;
+}
+
+th
+{
+	font-size: 22pt;
+	color:navy;
+}
+
+h3
+{
+	color:rgb(255,0,80);
+	font-size: 30pt;
+	font-family: cursive;
+}
+
+h4
+{
+	font-size:20pt;
+	font-family: cursive;
+	color:rgb(255,0,80);
+}
+
+.Valider
+{
+	font-weight:bold;
+	font-size:30pt;
+	color:red;
+	font-family: fantasy;
+	background: skyblue;
+	border: solid red 2pt;
+	margin-left:45%;
+}
+
+#Payer
+{
+	float:left;
+	margin-right: 50pt
+}
+
+fieldset
+{
+	width:400pt;
+}
+
+img
+{
+	float: right
+}
+
+li
+{
+	font-weight:bold;
+	font-size:18pt;
+}
+
+#oui_non
+{
+	width:300pt;
+	height: 113pt
+}
+
+#oui_non input
+{
+	margin-left:30pt;
+}
+
+#erreur
+{
+	padding: 30pt;
+	font-size: 24pt;
+}
+
+#num_rue
+{
+	width:3em;
+}

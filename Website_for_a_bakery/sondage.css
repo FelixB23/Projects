@@ -1,0 +1,52 @@
+body
+{
+	background-image:linear-gradient(orange, rgb(255,200,100));
+}
+
+#sondage, #contact
+{
+	color: yellow;
+}
+
+h1
+{
+	text-decoration: underline;
+	color:rgb(255,0,80);
+	font-size: 40pt;
+	font-family: cursive;
+	text-align: center;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
+
+p
+{
+	font-family:cursive;
+	font-size:2rem;
+}
+
+form
+{
+	font-size:20px;
+	font-family:cursive;
+}
+
+#frequence
+{
+	color:rgb(100,200,50);
+}
+
+.demande,.envoi
+{
+	border:5px	ridge  rgb(245,188,66);
+	background-color:rgb(245,188,66);
+}
+
+img
+{
+	float:right;
+}
+
+input
+{
+	margin-left: 20pt;
+}

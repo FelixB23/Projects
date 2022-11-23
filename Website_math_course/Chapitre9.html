@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 9</title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch9"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo9">Exercice chapitre 9</a>
+
+			<h1>Chapitre 9 : Probabilités</h1>
+
+			<h2>Probabilités conditionnelles</h2>
+			<h3>Définition</h3>
+			<fieldset>
+				<p>Soit \(\mathbb{P}\) une loi de probabilité définie sur un univers \(\Omega\) et \(A\) et \(B\) deux évènements avec \(\mathbb{P}(A) \ne 0\).</p>
+				<p>La probabilité de l'évènement <strong>B sachant A</strong>, noté \(\mathbb{P}_A(B)\) est définie par \(\mathbb{P}_A(B) = \displaystyle \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(A)}\).</p>
+			</fieldset>
+			<div class="image">
+				<img src="arbre_proba.png" alt="arbre pondéré" width=500 />
+				<p>Dans le cas d'une expérience aléatoire mettant en jeu des probabilités conditionnelles, on peut modéliser la situation par un <strong>arbre pondéré</strong>.</p>
+				<ol>
+					<li>La somme des probabilités des branches (ce qui relient deux évènements) issues d'un même n&oelig;ud (point de départ d'une ou plusieurs branches) est égale à 1. <br/>ex : \(\mathbb{P}(A) = \mathbb{P}(\bar A)\)</li>
+					<li>La probabilité d'un chemin (suite de branche = intersection des évènements rencontrés) est le produit des probabilités des branches le composant. <br/>ex :\(\mathbb{P}(A \cap B) = \mathbb{P}_A(B) \times \mathbb{P}(A)\).</li>
+				</ol>
+			</div>
+			<h3>Partition de l'univers</h3>
+			<p>Les évènements \(B_1\), \(B_2\), ..., \(B_n\) forment une <strong>partition</strong> de l'univers \(\Omega\) s'ils sont deux à deux disjoints et que leur réunion est l'univers \(\Omega\).</p>
+			<h3>Théorème : Formules des probabilités totales</h3>
+			<fieldset>
+				<p>On suppose que les évènements \(B_1\), \(B_2\), ..., \(B_n\) forment une partition de l'univers \(\Omega\). Alors pour tout évènement \(A\), \(\mathbb{P}(A) = \mathbb{P}(A \cap B_1) +  \mathbb{P}(A \cap B_2) + ... +  \mathbb{P}(A \cap B_n)\).</p>
+			</fieldset>
+			<p>Cas particulier: Pour tout évènement \(B\), \(B\) et \(\bar B\) forment une partition de l'univers donc, si \(A\) est un évènement, \(\mathbb{P}(A) = \mathbb{P}(A \cap B) +  \mathbb{P}(A \cap \bar B) =  \mathbb{P}(B) \times \mathbb{P}_B(A) +  \mathbb{P}(\bar B) \times \mathbb{P}_\bar B(A)\).</p>
+			<h3>Evènements indépendants</h3>
+			<fieldset>
+				<p>Deux évènements \(A\) et \(B\) sont indépendants \(\Leftrightarrow\) \(\mathbb{P}(A \cap B) = \mathbb{P}(A) \times \mathbb{P}(B)\) \(\Leftrightarrow\) \(\mathbb{P}_B(A) = \mathbb{P}(A)\) \(\Leftrightarrow\) \(\mathbb{P}_A(B) = \mathbb{P}(B)\)</p>
+				<p>Si \(A\) et \(B\) sont indépendants, \(\bar A\) et \(B\) le sont aussi, ainsi que \(A\) et \(\bar B\).</p>
+			</fieldset>
+
+			<h2>Lois de Bernoulli et binomiale</h2>
+			<h3>Epreuve de Bernoulli</h3>
+			<fieldset>
+				<p>Lorsqu'une expérience aléatoire n'a que <strong>deux issues</strong> possibles, on la nomme <strong>épreuve de Bernoulli</strong>.</p>
+				<ul>
+					<li>On note \(p\) la probabilité du succès et \(q = 1 - p\) la probabilité de l'échec.</li>
+					<li>La variable aléatoire qui prend la valeur 1 en cas de succès et 0 en cas d'échec est appelé <strong>variable aléatoire de Bernoulli</strong>.</li>
+					<li>La loi de probabilité de cette variable aléatoire est appelée <strong>loi de Bernoulli</strong> de paramètre \(p\).</li>
+				</ul>
+				<table>
+					<tbody>
+						<tr><td>\(x_i\)</td><td>0</td><td>1</td></tr>
+						<tr><td>\(\mathbb{P}(X = x_i)\)</td><td>\(1 - p\)</td><td>\(p\)</td></tr>
+					</tbody>
+				</table>
+			</fieldset>
+			<ul>
+				<li>Espérance de la loi de Bernoulli : \(E(X) = p\)</li>
+				<li>Variance de la loi de Bernoulli : \(V(X) = p(1 - p)\)</li>
+				<li>Ecart-type de la loi de Bernoulli : \(\sigma = \sqrt{p(1 - p)}\)</li>
+			</ul>
+			<h3>Loi binomiale</h3>
+			<fieldset>
+				<p>Soit \(X\) une variable aléatoire correspondant au nombre de succès après avoir répété \(n\) fois une  épreuve de Bernoulli de façon identique et indépendante. Alors X suit une loi binomiale de paramètre \(n\) et \(p\), où \(p\)est la probabilité de succès de la loi de Bernoulli.</p>
+				<p>On a alors : \(\forall k \in \{1,...,n\},~ \mathbb{P}(X = k) = \displaystyle \binom{n}{k} \times p^k \times (1 - p)^{n-k}\).</p>
+			</fieldset>
+			<ul>
+				<li>Espérance de la loi Binomiale : \(E(X) = np\)</li>
+				<li>Variance de la loi de Binomiale : \(V(X) = np(1 - p)\)</li>
+				<li>Ecart-type de la loi de Binomiale : \(\sigma = \sqrt{np(1 - p)}\)</li>
+			</ul>
+
+			<h2>Loi binomiale centrée réduite</h2>
+			<h3>Variable centrée réduite</h3>
+			<fieldset>
+				<p>Lorsqu'une variable aléatoire \(X\) a pour espérance \(\mu\) et pour écart-type \(\sigma\) (non nul), la variable aléatoire \(Z = \displaystyle \frac{X - \mu}{\sigma}\) a pour espérance 0 et pour écart-type 1. La variable \(Z\) est appelée "<strong>variable centrée réduite</strong>" associée à X.</p>
+			</fieldset>
+			<h3>Théorème de Moivre-Laplace</h3>
+			<p>Soit, pour tout entier n, une variable aléatoire \(X_n\) suivant une loi binomiale \(\mathcal{B}(n,p)\) et \(Z_n = \displaystyle \frac{X_n - np}{\sqrt{np(1 - p)}}\) la variable centrée réduite associée à \(X_n\). Alors,</p>
+			<p>pour tout réels \(a\) et \(b\) tels que \(a \lt b\), \(\lim_{n \to \infty} \mathbb{P}(a \le Z_n \le b) = \displaystyle \int_{a}^{b} \frac{1}{\sqrt{2}} e^{-\frac{x^2}{2}}\).</p>
+
+			<h2>Loi normale centrée réduite</h2>
+			<h3>Définition</h3>
+			<fieldset>
+				<p>La loi normale centée réduite, notée \(\mathcal{N}(0,1)\) est la loi continue ayant pour densité de probabilité la fonction \(f\) définie par \(f(x) = \displaystyle \frac{1}{\sqrt{2}} e^{-\frac{x^2}{2}}\).</p>
+				<p>Son espérance est nulle et son écart-type vaut 1.</p>
+				<p>Si X suit une loi normale \(\mathcal{N}(0,1)\), alors :</p>
+				<ol>
+					<li>\(\mathbb{P}(X \in \mathbb{R}) = 1\)</li>
+					<li>\(\mathbb{P}(X \le 0) = \mathbb{P}(X \ge 0) = 0,5\)</li>
+					<li>\(\forall a \in \mathbb{R},~ \mathbb{P}(X \le -a) = \mathbb{P}(X \ge a)\)</li>
+					<li>\(\forall a \in \mathbb{R},~ \mathbb{P}(X \ge a) = 1 - \mathbb{P}(X \le a)\)</li>
+				</ol>
+			</fieldset>
+
+			<h3>Propriété : "inverse de la loi normale"</h3>
+			<p>Soit \(X\) une variable aléatoire qui suit la loi normale \(\mathcal{N}(0,1)\). Alors, pour tout réel \(\alpha \in ]0 ; 1[\), il existe un unique réel positif \(u_\alpha\) tel que \(\mathbb{P}(-u_\alpha \le X \le u_\alpha) = 1 - \alpha\).</p>
+			<h3>Valeurs remarquables</h3>
+			<ul>
+				<li>\(\mathbb{P}(-0,97 \le X \le 0,97) \simeq \displaystyle \frac{2}{3}\)</li>
+				<li>\(\mathbb{P}(-1,96 \le X \le 1,96) \simeq 0,95\)</li>
+				<li>\(\mathbb{P}(-2,58 \le X \le 2,58) \simeq 0,99\)</li>
+			</ul>
+
+			<h2>Loi normale \(\mathcal{N}(\mu,\sigma^2)\)</h2>
+			<h3>Définition</h3>
+			<fieldset>
+				<p>Soit \(\mu\) un nombre réel et \(\sigma\) un nombre réel strictement positif. La variable aléatoire \(X\) suit une loi normale \(\mathcal{N}(\mu,\sigma^2)\) si et seulement si la variable \(Y = \displaystyle \frac{X - \mu}{\sigma}\) suit une loi normale centrée réduite. Soit \(a \in \mathbb{R}\),</p>
+				<ol>
+					<li>\(\mathbb{P}(X \in \mathbb{R}) = 1\)</li>
+					<li>\(\mathbb{P}(X \le \mu) = \mathbb{P}(X \ge \mu) = 0,5\)</li>
+					<li>\(\mathbb{P}(X \le \mu-a) = \mathbb{P}(X \ge \mu+a)\)</li>
+					<li>\(\mathbb{P}(X \ge a) = 1 - \mathbb{P}(X \le a)\)</li>
+				</ol>
+			</fieldset>
+			<h3>Intervalle à "1, 2, ou 3 sigmas"</h3>
+			<ul>
+				<li>\(\mathbb{P}(\mu-\sigma \le X \le \mu+\sigma) \simeq 0,68\)</li>
+				<li>\(\mathbb{P}(\mu-2\sigma \le X \le \mu+2\sigma) \simeq 0,95\)</li>
+				<li>\(\mathbb{P}(\mu-3\sigma \le X \le \mu+3\sigma) \simeq 0,997\)</li>
+			</ul>
+
+			<br>
+
+			<a href="#ch9">Revenir en haut de la page</a>
+
+			<h1 id="exo9">Exercices d'application du chapitre 9 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<label for="q1">Vrai ou faux ? Soit \(A\) et \(B\) deux évènements vérifiant \(\displaystyle \mathbb{P}(A) = \frac{1}{3},~ \mathbb{P}(B) = \frac{3}{4},~ \mathbb{P}(A \cup B) = \frac{5}{6}\), alors \(A\) et \(B\) sont indépendants.</label>
+						<select name="q1" id="q1">
+  							<option value="Vrai">Vrai</option>
+  							<option value="Faux">Faux</option>
+  						</select>
+  					</li>
+  					<li>
+  						<p>Soit \(A\), \(B_1\), \(B_2\), ...,\(B_n\) des évènements. Pour calculer \(\mathbb{P}(A)\) on peut appliquer la formule des probabilités totales :</p>
+  						<input type="checkbox" id="disjoints" name="disjoints">
+  						<label for="disjoints">si les \(B_i\) sont deux à deux disjoints.</label><br/>
+  						<input type="checkbox" id="ind" name="ind">
+  						<label for="ind">si les \(B_i\) sont mutuellement indépendants.</label><br/>
+  						<input type="checkbox" id="omega" name="omega">
+  						<label for="omega">si la réunion des \(B_i\) est l'univers \(\Omega\).</label><br/>
+  						<input type="checkbox" id="union" name="union">
+  						<label for="union">afin d'avoir \(\mathbb{P}(A) = \mathbb{P}(A \cup B_1) + \mathbb{P}(A \cup B_2) + ... + \mathbb{P}(A \cup B_n)\).</label><br/>
+  						<input type="checkbox" id="inter" name="inter">
+  						<label for="inter">afin d'avoir \(\mathbb{P}(A) = \mathbb{P}(A \cap B_1) + \mathbb{P}(A \cap B_2) + ... + \mathbb{P}(A \cap B_n)\).</label>
+  					</li>
+  					<li>
+  						<p>On lance une pièce 8 fois d'affilé. Soit \(X\) la variable aléatoire comptant le nombre de faces obtenus après les 8 lancers. Quelle est la loi suivie par \(X\) ?</p>
+  						<input type="radio" name="q3" value="3prop1" id="3prop1"/>
+						<label for="3prop1">Une loi de Bernoulli de paramètre \(p = 8\).</label><br/>
+						<input type="radio" name="q3" value="3prop2" id="3prop2"/>
+						<label for="3prop2">Une loi de Bernoulli de paramètre \(p = 0,5\).</label><br/>
+						<input type="radio" name="q3" value="3prop3" id="3prop3"/>
+						<label for="3prop3">Une loi de binomiale de paramètre \(n = 8\) et \(p = 0,5\).</label><br/>
+						<input type="radio" name="q3" value="3prop4" id="3prop4"/>
+						<label for="3prop4">Une loi normale de paramètre \(\mu = 8\) et \(\sigma^2 = 0,5\).</label>
+					</li>
+					<li>
+						<p>Calculer pour cette loi \(\mathbb{P}(X = k),~ k \in \{0,...,8\}\) :</p>
+						<input type="radio" name="q4" value="4prop1" id="4prop1"/>
+						<label for="4prop1">\(\mathbb{P}(X = k) = \displaystyle \binom{8}{k} 0,5^{8}\)</label>
+						<input type="radio" name="q4" value="4prop2" id="4prop2"/>
+						<label for="4prop2">\(\mathbb{P}(X = k) = 0,5^{k}\)</label>
+						<input type="radio" name="q4" value="4prop3" id="4prop3"/>
+						<label for="4prop3">\(\mathbb{P}(X = k) = 0,5\)</label>
+					</li>
+					<li>
+						<p>Soit la variable aléatoire \(Y\) suivant une loi normale centrée réduite. Que vaut \(\mathbb{P}(Y \ge 1,96)\) ?</p>
+						<input type="radio" name="q4" value="5prop1" id="5prop1"/>
+						<label for="5prop1">\(\mathbb{P}(Y \ge 1,96) = 0,95\)</label>
+						<input type="radio" name="q4" value="4prop2" id="5prop2"/>
+						<label for="5prop2">\(\mathbb{P}(Y \ge 1,96) = 0,05\)</label>
+						<input type="radio" name="q4" value="5prop3" id="5prop3"/>
+						<label for="5prop3">\(\mathbb{P}(Y \ge 1,96) = 0,025\)</label>
+  				</ol>
+  				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>Vrai. En effet, \(\mathbb{P}(A \cap B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cup B) = \displaystyle \frac{1}{4} = \mathbb{P}(A) \times \mathbb{P}(B)\).</li>
+						<li>Pour calculer \(\mathbb{P}(A)\) on peut appliquer la formule des probabilités totales si les \(B_i\) sont deux à deux disjoints et que leur réunion est l'univers \(\Omega\), afin d'avoir \(\mathbb{P}(A) = \mathbb{P}(A \cap B_1) + \mathbb{P}(A \cap B_2) + ... + \mathbb{P}(A \cap B_n)\).</li>
+						<li>Une loi de binomiale de paramètre \(n = 8\) et \(p = 0,5\).</li>
+						<li>\(\mathbb{P}(X = k) = \displaystyle \binom{8}{k} 0,5^{8}\)</li>
+						<li>\(\mathbb{P}(Y \ge 1,96) = 1 - \mathbb{P}(Y \le 1,96) = 1 - \mathbb{P}(-1,96 \le Y \le 1,96) - \mathbb{P}(Y \le -1,96) = 1 - \mathbb{P}(-1,96 \le Y \le 1,96) - \mathbb{P}(Y \ge 1,96)\) <br/> \(\Leftrightarrow 2 \times \mathbb{P}(Y \ge 1,96) = 1 - \mathbb{P}(-1,96 \le Y \le 1,96)\) <br/>\(\Leftrightarrow \mathbb{P}(Y \ge 1,96) = \displaystyle \frac{1 - \mathbb{P}(-1,96 \le Y \le 1,96)}{2} = \frac{1 - 0,95}{2} = 0,025\)</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
+
+

@@ -1,0 +1,64 @@
+body
+{
+	background-image:linear-gradient(orange, rgb(255,200,100));
+}
+
+#recrutement
+{
+	color:yellow;
+}
+
+.lettremotiv
+{
+	
+	border:5px	ridge  rgb(245,188,66);
+	background-color:rgb(245,188,66);
+}
+
+h1
+{
+	text-decoration: underline;
+	color:rgb(255,0,80);
+	font-size: 40pt;
+	font-family: cursive;
+	text-align: center;
+	text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+}
+
+p
+{
+	font-family: "Times New Roman",Times, Serif;
+	font-size:2rem;
+	font-style:oblique;
+}
+
+
+ul
+{
+	list-style-type: square;
+	font-size: 16pt;
+	margin-bottom: 2pt;
+}
+
+#envoi
+{
+	margin-left:300pt;
+	margin-bottom: 50pt;
+	font-size: 16pt;
+}
+
+label
+{
+	font-size:14pt;
+}
+
+.Valider
+{
+	font-weight:bold;
+	font-size:30pt;
+	color:red;
+	font-family: fantasy;
+	background: skyblue;
+	border: solid red 2pt;
+	margin-left:45%;
+}

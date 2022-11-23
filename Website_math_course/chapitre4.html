@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 4 </title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch4"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo4">Exercice chapitre 4</a>
+
+			<h1>Chapitre 4 : Fonction exponentielle</h1>
+			
+			<fieldset>
+				<p>Il existe une unique fonction \(f'=f\) qui est définie et dérivable sur \(\mathbb{R}\), vérifiant \(f'=f\) et \(f(0)=1\). </p>
+				<p>Cette fonction s'appelle la fonction exponentielle. On peut la noter \(\exp\).</p>
+			</fieldset>
+
+			<br/><br/>
+
+			<p> La première équation est une equation différentielle, c'est à dire une équation où l'inconnue est une fonction. La fonction exponentielle est donc solution de l'équation différentielle mentionnée ci-dessous.</p>
+			<br/>
+			<fieldset>
+				<p>Si on a une fonction  \(f\) definie et dérivable sur \(\mathbb{R}\) avec \(f'=f\) et \(f(0)=1\),alors cette fonction ne s'annule pas sur \(\mathbb{R}\). \(\forall x,~ f(x) \ne 0\). </p>
+			</fieldset>
+			<p>Graphiquement on constate comme mentionné ci-dessus que la fonction ne s'annule pas.</p>
+			<a class="img" href="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mfnf-exp.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Mfnf-exp.svg" alt="graphique de la  fonction exponentielle" width="600" height="400" title="Courbe représentant la fonction exponentielle"/></a>
+			<p>Nous allons énoncer un certain nombre de résultats à connaître sur la fonction exponentielle qui est maintenant une fonction de référence.</p>
+			<br/>
+			<fieldset>
+				<p><strong>Etude de la continuité</strong></p>
+				<p>La fonction exponentielle est dérivable sur l'ensemble des réels donc elle est continue sur l'ensemble des réels.</p>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p><strong>Etude du signe de la fonction exponentielle</strong></p>
+				<p>La fonction exponentielle est strictement positive sur l'ensemble des réels. </p>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p><strong>Etude du sens de variation de la  fonction exponentielle</strong></p>
+				<p>La fonction exponentielle est strictement croissante sur l'ensemble des réels. </p>
+			</fieldset>
+			<br/>
+
+			<p>Nous allons donner des propriétés permettant de résoudre des équations ou des inéquations avec la fonction exponentielle.</p>
+			<br/>
+			<fieldset>
+				<p>Grâce au sens de variation de la fonction exponentielle on a les propriétés suivantes (valables pour n'importe quels réels a et b):</p>
+				<ol>
+					<li>\(\exp (a)=\exp (b) \Leftrightarrow a=b\)</li>
+					<li>\(\exp (a) \lt \exp (b) \Leftrightarrow a \lt b\)</li>
+				</ol>	
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Nous allons voir un lien entre fonction exponentielle et logaritme népérien:</p>
+				<p>L'équation \(\exp (x)=a\) a une unique solution que l'on note \(\ln (a)\), pour tout réel \(a\) strictement positif.</p>	
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Nous allons voir quelques résultats de limites en rapport avec la fonction exponentielle:</p>
+				<ol>
+					<li>\({\displaystyle \lim_{x \to +\infty} \frac{\exp x}{x} = +\infty}\):croissance comparée.</li>
+					<li>\(\lim_{x \to +\infty}\exp(x)=+\infty\)</li>
+					<li>\(\lim_{x \to -\infty}\exp(x)=0\)</li>
+					<li>\(\lim_{x \to -\infty}\exp(x) \times x=0\)</li>
+					<li>\({\displaystyle \lim_{x \to 0} \frac{\exp x-1}{x} = 1}\) : lien avec un nombre dérivé.</li>
+					<li>L'axe des abscisses est une asymptote horizontale à la courbe représentative de la fonction exponentielle en \(-\infty\).</li>
+				</ol>	
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>On considère une fonction \(u\) dérivable sur un intervalle I.</p>
+				<p> Alors on a les résultats suivants:</p>
+				<ul>
+					<li>\((\exp(u))'=u' \times \exp(u)\)</li>
+					<li>La fonction \(\exp(u)\) a le même sens de variation que la fonction \(u\).</li>
+				</ul>	
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>On retrouve avec la fonction exponentielle des propriétés similaires aux puissances.</p>
+				<p> Ainsi on a les résultats suivants(valables pour tout réels \(x\) et \(y\)):</p>
+				<ul class="aligne">
+					<li>\(\exp(x+y)=exp(x) \times \exp(y)\)</li>
+					<li>\(\exp(-x)=\displaystyle \frac{1}{\exp(x)}\)</li>
+					<li>\(\exp(x-y)=\displaystyle \frac{\exp(x)}{exp(y)}\)</li>
+					<li>\(\exp(n \times x)=(\exp(x))^n\)</li>
+				</ul>	
+
+			</fieldset>
+			<br/>
+
+			<hr>
+
+			<a href="#ch4">Revenir en haut de la page</a>
+
+			<h1 id="exo4">Exercices d'application du chapitre 4 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<p>La fonction exponentielle est-elle continue sur \(\mathbb{R}\) ?</p>
+						<input type="radio" name="q1" value="1prop1" id="1prop1"/>
+						<label for="1prop1">OUI</label>
+						<input type="radio" name="q1" value="1prop2" id="1prop2"/>
+						<label for="1prop2">NON</label>
+						
+					</li>
+					<li>
+						<p>Que vaut sa limite en \(+\infty\) ? </p>
+						<input type="radio" name="q2" value="2prop1" id="2prop1"/>
+						<label for="2prop1">1</label>
+						<input type="radio" name="q2" value="2prop2" id="2prop2"/>
+						<label for="2prop2">\(+\infty\)</label>
+						<input type="radio" name="q2" value="2prop3" id="2prop3"/>
+						<label for="2prop3">0</label>
+					</li>
+					<li>
+						<p>La fonction exponentielle est égale à sa dérivée.</p>
+						<input type="radio" name="quest3" value="rep1" id="rep1"/>
+						<label for="rep1">VRAI</label>
+						<input type="radio" name="quest3" value="rep2" id="rep2"/>
+						<label for="rep2">FAUX</label>
+
+						
+					
+				</ol>
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>OUI</li>
+						<li>\(+\infty\)</li>
+						<li>VRAI</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

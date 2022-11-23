@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 5</title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch5"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo5">Exercice chapitre 5</a>
+
+			<h1>Chapitre 5 : La fonction logarithme népérien</h1>
+
+			<h2>Définition</h2>
+			<fieldset>
+				<p>Soit y un réel strictement positif. On appelle logarithme népérien du réel y l'unique solution à l'équation \(e^x = y\). On note cette solution \(\ln y\).</p>
+				<p>La fonction logarithme népérien, noté \(\ln\), est la fonction définie sur \(\mathbb{R}_{+}^{*}\) par \(x \mapsto \ln x\).</p>
+				<p>On a :</p> 
+				<ul>
+					<li>\(\forall x \gt 0,~ e^{\ln x}=x\)</li>
+					<li>\(\forall x \in \mathbb{R},~ \ln (e^x)=x\)</li>
+					<li>\(\forall a,b \gt 0,~ \ln a = \ln b \Leftrightarrow a = b\) et \(\ln a \lt \ln b \Leftrightarrow a \lt b\)</li>
+				</ul>
+			</fieldset>
+			<p>La fonction \(\ln\) est la <strong>fonction réciproque</strong> de la fonction exponentielle.</p>
+			<p>Dans un repère orthonormé, les courbes représentatives des fonctions logarithme népérien et exponentielle sont symétriques par rapport à la droite d'équation \(y = x\):</p>
+			<a class="img" href="https://media.kartable.fr/uploads/finalImages/final_5ef33e8241e304.52572991.png"><img alt="courbe des fonctions ln et exp" title="courbe des fonctions ln et exp" src="https://media.kartable.fr/uploads/finalImages/final_5ef33e8241e304.52572991.png"></a>
+
+			<h2>Etude de la fonction logarithme népérien</h2>
+			<fieldset>
+				<p>La fonction \(\ln\) est définie, continue, et strictement croissante sur \(]0 ; +\infty[\). On a les limites suivantes :</p>
+				<ul class="aligne">
+					<li>\(\lim_{n \to 0} \ln x = -\infty\)</li>
+					<li>\(\lim_{n \to +\infty} \ln x = +\infty\)</li>
+					<li>\(\lim_{n \to 0} {\displaystyle \frac{\ln (1+x)}{x}} = 1\)</li>
+					<li>\(\lim_{n \to +\infty} {\displaystyle \frac{\ln (x)}{x}} = 0\)</li>
+					<li>\(\lim_{n \to 0} x\ln x = 0\)</li>
+				</ul>
+				<br/><br/>
+			<p>La fonction \(\ln\) dérivable sur \(\mathbb{R}_{+}^{*}\). Sa dérivé est \((\ln x)' = {\displaystyle \frac{1}{x}}\).</p>
+			<p>Si \(u\) est une fonction dérivable et strictement positive sur un intervalle I, \(\ln u\) est dérivable sur I et \((\ln u)' = {\displaystyle \frac{u'}{u}}\).</p>
+			</fieldset>
+			<p>Signe de la fonction \(\ln\) :</p>
+			<ul>
+				<li>\(\ln x = 0 \Leftrightarrow x = 1 \)</li>
+				<li>\(\ln x \lt 0 \Leftrightarrow 0 \lt x \lt 1 \)</li>
+				<li>\(\ln x \gt 0 \Leftrightarrow x \gt 1 \)</li>
+			</ul>
+
+			<h2>Propriétés algébriques de la fonction logarithme népérien</h2>
+			<p>Relation fonctionnelle : \(\forall a,b \gt 0,~ \ln(a \times b) = \ln a + \ln b\)</p>
+			<h3>Propriété immédiates</h3>
+			<ol class="aligne">
+				<li>\(\ln {\displaystyle \frac{1}{b}} = -\ln b\)</li>
+				<li>\(\ln {\displaystyle \frac{a}{b}} = \ln a - \ln b\)</li>
+				<li>\(\ln a^n = n \times \ln a\)</li>
+				<li>\(\ln \sqrt{a} = {\displaystyle \frac{1}{2}}\ln b\)</li>
+			</ol>
+			<br/><br/>
+
+			<hr>
+
+			<a href="#ch5">Revenir en haut de la page</a>
+
+			<h1 id="exo5">Exercices d'application du chapitre 5 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<p>Résoudre l'équation \(9 - 4\ln x > 5 \) :</p>
+						<input type="radio" name="quest1" value="rep1" id="rep1"/>
+						<label for="rep1">\(\mathcal{S} = ]-\infty ; e[\)</label><br/>
+						<input type="radio" name="quest1" value="rep2" id="rep2"/>
+						<label for="rep2">\(\mathcal{S} = ]0 ; e[\)</label><br/>
+						<input type="radio" name="quest1" value="rep3" id="rep3"/>
+						<label for="rep3">\(\mathcal{S} = ]e ; +\infty[\)</label>
+					</li>
+					<li>
+						<p>Calculer la dérivée de \(\ln (5x^3 - 2x)\) :</p>
+						<input type="radio" name="quest2" value="prop1" id="prop1"/>
+						<label for="prop1">\((15x^2 - 2)\ln (5x^3 - 2x)\)</label>
+						<input type="radio" name="quest2" value="prop2" id="prop2"/>
+						<label for="prop2">\(\ln (15x^2 - 2)\)</label>
+						<input type="radio" name="quest2" value="prop3" id="prop3"/>
+						<label for="prop3">\({\displaystyle \frac{15x^2 - 2}{5x^3 - 2x}}\)</label>
+					</li>
+					<li>
+						<label for="cos">Vrai ou faux ? \(\ln(27e^3) = 3\ln 3 + 3\)</label>
+						<select name="cos" id="cos">
+  							<option value="Vrai">Vrai</option>
+  							<option value="rep2">Faux</option>
+  						</select>
+  					</li>
+				</ol>
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>\(\mathcal{S} = ]0 ; e[\)</li>
+						<li>\({\displaystyle \frac{15x^2 - 2}{5x^3 - 2x}}\)</li>
+						<li>Vrai</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 6 </title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch6"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo6">Exercice chapitre 6</a>
+
+			<h1>Chapitre 6 : Nombres complexes</h1>
+
+			<h2>Définition</h2>
+			<fieldset>
+				<p>Il existe un ensemble que l'on note \(\mathbb{C}\)(ensemble des nombres complexes). C'est un ensemble qui dispose de plusieurs propriétés. </p>
+				<p>L'ensemble des nombres complexes contient l'ensemble des nombres réels.</p>
+				<p>Dans \(\mathbb{C}\) on a exactement les mêmes règles de calculs que dans \(\mathbb{R}\). L'addition ainsi que la multiplication des nombres réels s'étendent aux nombres complexes.</p>
+				<p>L'ensemble des nombres complexes contient un nombre que l'on note \(i\) tel que \(i^2=-1\).</p>
+				<p>Il est possible d'écrire n'importe quel nombre complexe \(z\) de manière unique ,\(z=a+i \times b\). \(a\) et \(b\) sont deux nombres réels. </p>
+			</fieldset>
+			<br/>
+
+			<h2>Forme algébrique</h2>
+			<p> Nous allons maintenant définir la forme algébrique d'un nombre complexe \(z\), c'est une forme d'écriture possible pour un nombre complexe \(z\) . Cependant nous verrons qu'il en existe d'autres.</p>
+			<br/>
+			<fieldset>
+				<p>L'écriture \(z=a+i \times b\) avec \(a\) et \(b\) appartenant à l'ensemble des nombres réels est la forme algébrique du nombre complexe \(z\).</p>
+				<p>Le réel \(a\) est la partie réelle de \(z\). On note \(Re(z)\).</p>
+				<p>Le réel \(b\) est la partie imaginaire de \(z\). On note \(Im(z)\).</p>
+				<p>On dit que \(z\) est un réel \(\Leftrightarrow\) \(Im(z)=0\).</p>
+				<p>On dit que \(z\) est un imaginaire pur \(\Leftrightarrow\) \(Re(z)=0\).</p>
+
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Deux nombres complexes sont égaux si et seulement si leurs parties réelles et imaginaires sont identiques.</p>
+				<p>Un nombre complexe est nul si et seulement si sa partie réelle et sa partie imaginaire sont toutes les deux nulles.</p>
+			</fieldset>
+			<br/>
+			<fieldset>
+			<p>Tout nombre complexe \(z\) différent de 0 a un inverse dans \(\mathbb{C}\),on le note \(\displaystyle \frac{1}{z}\).</p>
+			</fieldset>
+			<br/>
+			<fieldset>
+			<p>On considère deux nombres complexes \(z\) et \(z'\). Alors \(\displaystyle \frac{z}{z'}=z \times \frac{1}{z'}\). C'est le quotient de \(z\) par \(z'\).</p>
+			</fieldset>
+			<br/>
+
+			<h2>Conjugué</h2>
+			<p>Nous allons évoquer la notion de conjugué d'un nombre complexe, une notion importante autour des nombres complexes.</p>
+			<br/>
+			<h3>Définition</h3>
+			<fieldset>
+				<p>On considère un nombre complexe \(z\) écrit sous forme algébrique.</p>
+				<p>Le conjugué de \(z\) est le nombre complexe \(\bar z\) tel que \(\bar z=a-i \times b\).</p>
+			</fieldset>
+			<br/>
+			<h3>Propriétés</h3>
+			<fieldset>
+				<p>Voici quelques propriétés autour du conjugué d'un nombre complexe: </p>
+				<ol>
+					<li>On prend un nombre complexe \(z\). Le conjugué du conjugué de \(z\) donne \(z\).</li>
+					<li>\(z \times \bar z=a^2+b^2\)</li>
+					<li>\(z + \bar z=2 \times Re(z)\)</li>
+					<li>\(z - \bar z=2 \times i \times Im(z)\)</li>
+					<li>Un nombre complexe \(z\) est réel si et seulement si \(z=\bar z\).</li>
+					<li>Un nombre complexe \(z\) est un imaginaire pur si et seulement si \(z=-\bar z\).</li>
+				</ol>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Nous allons voir les propriétés du conjugué en lien avec les opérations.</p>
+				<ul>
+					<li>Pour tous nombres complexes \(z\) et \(z'\) : \(\overline{z+z'}=\bar z + \bar z'\). Autrement dit le conjugué de la somme est égal à la somme des conjugués. </li>
+					<li>Le conjugué du produit est égal au produit des conjugués.</li>
+					<li>Le conjugué de l'inverse vaut l'inverse du conjugué.</li>
+					<li>Le conjugué d'un quotient est égal au quotient des conjugués.</li>
+				</ul>	
+			</fieldset>
+			<br/>
+
+			<h2>Résolution d'équations</h2>
+			<p>Nous allons voir les équations du second degré dans l'ensemble des nombres complexes.</p>
+			<br/>
+			<fieldset>
+				<p>On considère \(a\) un nombre réel différent de 0.</p>
+				<p>On appelle les racines carrées de \(a\) dans l'ensemble des nombres complexes les solutions dans l'ensemble des nombres complexes de l'équation \(z^2=a\).</p>
+				<ol>
+					<li>Si \(a \gt 0\), les racines valent \(\sqrt{a}\) et \(-\sqrt{a}\). </li>
+					<li>Si \(a \lt 0\), les racines valent \(i \times \sqrt{-a} \) et \(-i \times \sqrt{-a} \). </li>
+				</ol>	
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>On prend trois réels \(a\),\(b\) et \(c\). \(a\) doit être différent de 0.</p>
+				<p>L'équation \(a \times z^2 +b \times z+c=0\) admet comme discriminant \(b^2-4 \times a \times c\).</p>
+				<ul>
+					<li>Si le discriminant(\(\Delta\)) est strictement positif, on a deux solutions réelles \(z= \displaystyle \frac{-b+\sqrt{\Delta}}{2 \times a}\) et \(z'= \displaystyle \frac{-b-\sqrt{\Delta}}{2 \times a}\).</li>
+					<li>Si le discriminant(\(\Delta\)) est nul, on a une solution réelle \(z= \displaystyle \frac{-b}{2 \times a}\). </li>
+					<li>Si le discriminant(\(\Delta\)) est strictement négatif, on a deux solutions complexes conjuguées \(z= \displaystyle \frac{-b+i \times \sqrt{-\Delta}}{2 \times a}\) et \(z= \displaystyle \frac{-b-i \times \sqrt{-\Delta}}{2 \times a}\).</li>
+				</ul>
+			</fieldset>
+			
+			<h2>Module et argument</h2>
+			<br/>
+			<fieldset>
+				<p>On considère un nombre complexe \(z\) et on prend M le point d'affixe \(z\) dans le plan complexe.</p>
+				<p>Le module de \(z\) correspond à la distance OM, on note \(\left\vert z \right\vert\).</p>
+				<p>L'argument de \(z\) correspond à la mesure de l'angle orienté (\(\overrightarrow{u}\);\(\overrightarrow{O M}\)).</p>
+			</fieldset>
+			<br/>
+			<table>
+				<caption>Quelques exemples de modules et d'arguments.</caption>
+				<tbody>
+					<tr>
+						<td>\(z\)</td>
+						<td>\(i\)</td>
+						<td>2</td>
+						<td>-2</td>
+						<td>\(1+i\)</td>
+					</tr>
+					<tr>
+						<td>\(\left\vert z \right\vert\)</td>
+						<td>1</td>
+						<td>2</td>
+						<td>2</td>
+						<td>\(\sqrt{2}\)</td>
+					</tr>	
+					<tr>
+						<td>\(\arg z\)</td>
+						<td>\(\displaystyle \frac{\Pi}{2}\)</td>
+						<td>0</td>
+						<td>\(\Pi\)</td>
+						<td>\(\displaystyle \frac{\Pi}{4}\)</td>
+					</tr>	
+				</tbody>
+			</table>
+			
+			<hr>
+
+			<a href="#ch6">Revenir en haut de la page</a>
+
+			<h1 id="exo6">Exercices d'application du chapitre 6 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<p>L'ensemble des nombres réels contient l'ensemble des nombres complexes.</p>
+						<input type="radio" name="q1" value="1prop1" id="1prop1"/>
+						<label for="1prop1">VRAI</label>
+						<input type="radio" name="q1" value="1prop2" id="1prop2"/>
+						<label for="1prop2">FAUX</label>
+					</li>
+					<li>
+						<p>L'équation \(x^2=-1\) n'admet aucune solution dans \(\mathbb{C}\). </p>
+						<input type="radio" name="q2" value="2prop1" id="2prop1"/>
+						<label for="2prop1">VRAI</label>
+						<input type="radio" name="q2" value="2prop2" id="2prop2"/>
+						<label for="2prop2">FAUX</label>
+					</li>
+					<li>
+						<p>Un nombre complexe écrit sous forme algébrique possède deux parties: une partie réelle et une partie imaginaire.</p>
+						<input type="radio" name="quest3" value="rep1" id="rep1"/>
+						<label for="rep1">VRAI</label>
+						<input type="radio" name="quest3" value="rep2" id="rep2"/>
+						<label for="rep2">FAUX</label>
+					</li>	
+				</ol>
+				
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>FAUX</li>
+						<li>FAUX</li>
+						<li>VRAI</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

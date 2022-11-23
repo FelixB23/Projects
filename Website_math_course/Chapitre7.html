@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 7</title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch7"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo7">Exercice chapitre 7</a>
+
+			<h1>Chapitre 7 : Calcul intégral</h1>
+
+			<h2>Définition et premières propriétés</h2>
+			<fieldset>
+				<p>Soit \(f\) une fonction <strong>positive</strong> et <strong>continue</strong> sur un intervalle \([a;b]\) et \(\mathcal{C}\) sa courbe représentative dans un repère orthogonal.</p>
+				<p>On appelle <strong>intégrale de \(f\) entre a et b</strong> l'aire sous la courbe de \(f\), c'est-à-dire l'aire de la surface délimité par la courbe \(\mathcal{C}\), l'axe des abscisses et les droites verticales d'équations \(x = a\) et \(x = b\).</p>
+				<p>On note : \(\displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x\).</p>
+				<p>\(a\) est la borne inférieure de cette intégrale tandis que \(b\) est la borne supérieure.</p>
+			</fieldset>
+
+			<div class="image">
+				<a class="img" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/630px-Integral_example.svg.png"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Integral_example.svg/630px-Integral_example.svg.png" alt="exemple d'intégrale" title="exemple d'intégrale" width=300 /></a>
+				<p> Si \(f\) est une fonction continue négative sur \([a;b]\), alors \(-f\) est positive et on a \(\displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x = -\displaystyle \int_{a}^{b} -f(x) \, \mathrm{d}x\).</p>
+				<p>Si \(f\) change de signe sur \([a;b]\), son intégrale est égale à la somme des aires des domaines définis par des intervalles sur lesquels \(f\) garde un signe constant.</p>
+			</div>
+
+			<h3>Propriétés de l'intégrale</h3>
+			<fieldset>
+				<p>Soit \(f\) et \(g\) deux fonctions continues sur un intervalle \([a;b]\), \(k \in \mathbb{R}\), et \(c \in [a;b]\). On a les propriétés suivantes :
+				<ol> 
+					<li>\(\displaystyle \int_{a}^{a} f(x) \, \mathrm{d}x = 0\)</li>
+					<li>\(\displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x = -\int_{b}^{a} f(x) \, \mathrm{d}x\)</li>
+					<li>\(\displaystyle \int_{a}^{b} kf(x) \, \mathrm{d}x = k\int_{a}^{b} f(x) \, \mathrm{d}x\)</li>
+					<li>\(\displaystyle \int_{a}^{b} (f(x) + g(x)) \, \mathrm{d}x = \int_{a}^{b} f(x) \, \mathrm{d}x + \int_{a}^{b} g(x) \, \mathrm{d}x\)</li>
+					<li>\(\displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x = \int_{a}^{c} f(x) \, \mathrm{d}x + \int_{c}^{b} f(x) \, \mathrm{d}x\) (relation de Chasles)</li>
+					<li>\(\forall x \in [a;b],~ f(x) \ge 0 \Rightarrow \displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x \ge 0\)</li>
+					<li>\(\forall x \in [a;b],~ f(x) \le g(x) \Rightarrow \displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x \le \int_{a}^{b} g(x) \, \mathrm{d}x\)</li>
+				</ol>
+			</fieldset>
+
+			<h2>Primitives</h2>
+
+			<h3>Théorème fondamentale</h3>
+			<fieldset>
+				<p>Soit \(f\) une fonction positive et continue sur \([a;b]\). On définit sur \([a;b]\) la fonction \(F:x \mapsto \displaystyle \int_{a}^{x} f(t) \, \mathrm{d}t\). Alors \(F\) est dérivable sur \([a;b]\) et sa dérivée est la fonction \(f\) : on a \(\forall x \in \mathbb{R},~ F'(x)=f(x)\).</p>
+				<p>Une <strong>primitive</strong> d'une fonction \(f\) continue sur \([a;b]\) est une fonction \(F\), dérivable sur \([a;b]\) telle que \(f\) est la <strong>dérivée</strong> de \(F\).</p>
+			</fieldset>
+			<p>Toute fonction <strong>continue</strong> sur un intervalle I admet une infinité de primitives sur I, qui sont de la formes : \(x \mapsto F(x) + k\), avec \(F\) une primitive de \(f\) sur I et \(k \in \mathbb{R}\).</p>
+			<p>Si \(x_{0}\) est un réel de I et \(y_{0}\) un réel quelconque, alors il existe <strong>une unique primitive</strong> \(F\) de \(f\) vérifiant \(F(x_{0}) = y_{0}\).</p>
+			<table >
+				<caption>Primitives de fonctions usuelles</caption>
+				<thead>
+					<tr>
+						<th>Fonction \(f\)</th>
+						<th>Une primitive de \(f\)</th>
+						<th>Intervalle de validité</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>\(f(x) = k\)</td>
+						<td>\(F(x) = kx\)</td>
+						<td>\(\mathbb{R}\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = x^n,~ n \notin \{-1,0\}\) </td>
+						<td>\(F(x) = \frac{1}{n+1} x^{n+1}\)</td>
+						<td>\(\mathbb{R}^*\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = \frac{1}{x}\)</td>
+						<td>\(F(x) = \ln x\)</td>
+						<td>\(\mathbb{R}_{+}^*\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = \frac{1}{\sqrt{x}}\)</td>
+						<td>\(F(x) = 2\sqrt{x}\)</td>
+						<td>\(\mathbb{R}_{+}^*\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = e^x\)</td>
+						<td>\(F(x) = e^x\)</td>
+						<td rowspan=5>\(\mathbb{R}\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = \cos x\)</td>
+						<td>\(F(x) = \sin x\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = \sin x\)</td>
+						<td>\(F(x) = -\cos x\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = \cos (ax + b)\)</td>
+						<td>\(F(x) = \frac{1}{a} \sin (ax+b),~ a \ne 0\)</td>
+					</tr>
+					<tr>
+						<td>\(f(x) = \sin (ax+b)\)</td>
+						<td>\(F(x) = -\frac{1}{a} \cos (ax + b),~ a \ne 0\)</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p>Si \(f\) et \(g\) sont deux fonctions continues sur un intervalle I et \(u\) une fonction dérivable sur I, \(k\) un réel quelconque et \(n\) un entier différent de -1 et 0:</p>
+			<ul>
+				<li>Une primitive de \(kf\) est \(kF\), avec \(F\) une primitive de \(f\) sur I.</li>
+				<li>Une primitive de \(f + g\) est \(F + G\), avec \(F\) et \(G\) des primitive de \(f\) et \(g\) sur I.</li>
+				<li>Une primitive de \(u' \times e^u\) est \(e^u\).</li>
+				<li>Une primitive de \(u' \times u^n\) est \(\frac{1}{n+1} u^{n+1}\).</li>
+				<li>Une primitive de \(\displaystyle \frac{u'}{u}\) est \(\ln u,~ u > 0\).</li>
+				<li>Une primitive de \(\displaystyle \frac{u'}{\sqrt{u}}\) est \(2\sqrt{u},~ u > 0\).</li>
+			</ul>
+
+			<h2>Calculs d'aires</h2>
+			<h3>Relation entre primitive et intégrale</h3>
+			<fieldset>
+				<p>Soit \(f\) une fonction continue sur un intervalle \([a;b]\) et \(F\) l'une de ses primitives. L'intégrale de la fonction \(f\) sur [a;b] est le nombre défini par : \[\displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x = F(b) - F(a)\]</p>
+			</fieldset>
+			<p>Remarque :</p>
+			<ul>
+				<li>Cette définition ne dépend pas de la primitive de \(f\) choisie.</li>
+				<li>On note \(\displaystyle \int_{a}^{b} f(x) \, \mathrm{d}x = \left [F(x) \right ]_a^b\)</li>
+			</ul>
+
+			<h3>Valeur moyenne d'une fonction continue</h3>
+			<fieldset>
+				<p>Soit \(f\) une fonction continue sur un intervalle \([a;b]\). La valeur moyenne de \(f\) sur \([a;b]\) est le réel \(m\) tel que: \[m={\displaystyle \frac{1}{b-a}\int_{a}^{b} f(x)dx}\]</p>
+				<p>Si \(f\) est positive, il s'agit de la valeur \(m\) pour laquelle l'intégrale de \(f\) est égale à l'aire du rectangle de base \([a;b]\) et de hauteur \(m\).</p>
+			</fieldset>
+
+			<hr>
+
+			<a href="#ch7">Revenir en haut de la page</a>
+
+			<h1 id="exo7">Exercices d'application du chapitre 7 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<label for="q1">Vrai ou faux ? L'intégrale d'une fonction continue qui change de signe est la somme de l'aire au-dessus de l'axe des abscisses délimitée par la courbe représentative de \(f\) et de l'aire sous l'axe des abscisses délimitée par la courbe représentative de \(f\).</label>
+						<select name="q1" id="q1">
+  							<option value="Vrai">Vrai</option>
+  							<option value="Faux">Faux</option>
+  						</select>
+  					</li>
+  					<li>
+  						<label for="q2">Caculer \({\displaystyle \int_{1}^{3} \frac{1}{x^3} \, \mathrm{d}x }\) : </label>
+  						<input type="text" name="q2" id="q2" size="5">
+  					</li>
+  					<li>
+  						<p>Quelle est la valeur moyenne \(m\) de la fonction \(f\) définie sur [0,6] par \(f(x) = \displaystyle \frac{1}{\sqrt{2x+4}}\) ?</p>
+  						<input type="radio" name="q3" value="prop1" id="prop1"/>
+						<label for="prop1">\(m = 2\)</label>
+						<input type="radio" name="q3" value="prop2" id="prop2"/>
+						<label for="prop2">\(m = \displaystyle \frac{1}{3}\)</label>
+						<input type="radio" name="q3" value="prop3" id="prop3"/>
+						<label for="prop3">\(m = \displaystyle \frac{1}{6}\)</label>
+  					</li>
+  				</ol>
+
+  				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>Faux, c'est la différence.</li>
+						<li>\(\displaystyle \int_{1}^{3} \frac{1}{x^3} \, \mathrm{d}x = \int_{1}^{3} x^{-3} \, \mathrm{d}x =\left [\frac{1}{-2} x^{-2} \right ]_1^3 = \left [-\frac{1}{2x^2} \right ]_1^3 = \frac{4}{9}\)</li>
+						<li>\(m = \displaystyle \frac{1}{6-0} \int_{0}^{6} \frac{1}{\sqrt{2x+4}} \, \mathrm{d}x = \frac{1}{6} \left [\sqrt{2x+4} \right ]_0^6 = \frac{1}{6} \times (4 - 2) = \frac{1}{3}\)</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
+

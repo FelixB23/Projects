@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 8 </title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch8"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo8">Exercice chapitre 8</a>
+
+			<h1>Chapitre 8 : Géométrie dans l'espace</h1>
+			
+			<h2>Rappels</h2>
+			<fieldset>
+				<p>On commence ce chapitre par quelques rappels:</p>
+				<ol>
+					<li>On peut appliquer tous les résultats de géométrie plane dans chaque plan.</li>
+					<li>Par trois points non alignés, passe un unique plan.</li>
+					<li>Par deux points distincts de l'espace, passe une unique droite.</li>
+					<li>Si un plan contient deux points distincts A et B, alors ce plan contient la droite (AB).</li>
+				</ol>	
+			</fieldset>
+			<br/>
+
+			<h2>Positions relatives des plans et droites de l'espace.</h2>
+			<br/>
+			<fieldset>
+				<ul>
+					<li>Deux droites de l'espace peuvent être coplanaires ou non coplanaires.</li>
+					<li>On dit que deux droites de l'espace sont coplanaires lorsqu'elle sont contenues dans un même plan.</li>
+					<li>On dit que deux droites de l'espace sont non coplanaires lorsqu'elles sont contenues dans des plans différents .</li>
+					<li>Deux droites de l'espace coplanaires peuvent être sécantes ou parallèles(confondues ou strictement parallèles).</li>
+					<li>Deux droites sécantes se coupent en un certain point de l'espace.</li>
+				</ul>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Une droite et un plan de l'espace peuvent être sécants suivant un point ou bien parallèles.</p>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Deux plans de l'espace peuvent être sécants suivant une droite ou bien parallèles.</p>
+			</fieldset>
+			<br/>
+
+			<h2>Parallélisme</h2>
+			<p>Nous allons donner des résultats de parallélisme, une notion importante en géométrie dans l'espace.</p>
+			<fieldset>
+				<p>Deux droites parallèles sont deux droites coplanaires qui ne possèdent pas de point de commun ou bien qui sont confondues.</p>
+				<p>On dit que deux plans sont parallèles si ce sont deux plans qui n'ont pas de point commun ou qui sont confondus.</p>
+				<p>Une droite est parallèle à un plan si elle ne possède pas de point commun avec le plan ou si elle est située dans le plan.</p>
+			</fieldset>
+			<br/>
+			
+			
+			<fieldset>
+				<p>Une droite est parallèle à un plan si et seulement si elle est parallèle à une droite de ce plan.</p>
+				
+			</fieldset><br/>
+			<fieldset>
+				<p>Nous allons voir quelques résultats concernant le parallélisme de deux droites. </p>
+				<ol>
+					<li>Si deux droites sont parallèles à une même droite alors elles sont parallèles entre elles.</li>
+					<li>Si deux plans sont parallèles, tout plan sécant à l'un est sécant à l'autre et les droites d'intersection sont parallèles.</li>
+					<li>On prend deux plans sécants. Si une droite du premier plan est parallèle à une droite du second plan, alors la droite d'intersection des deux plans est parallèle à ces deux droites.</li>
+				</ol>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Deux plans sont parallèles si et seulement si deux droites sécantes de l'un sont parallèles à deux droites sécantes de l'autre.</p>
+			</fieldset>
+			<br/>
+			<h2>Vecteurs colinéaires.</h2>
+			<br/>
+			<fieldset>
+				<p>On dit que deux vecteurs \(\overrightarrow{u}\) et \(\overrightarrow{v}\) sont colinéaires si et seulement si il existe un réel \(k\) tel que \(\overrightarrow{v}=k \times \overrightarrow{u} \).</p>
+			</fieldset>
+			<p>Le vecteur nul est colinéaire à n'importe quel vecteur de l'espace.</p>
+			<br/>
+			
+			<h2>Repères dans l'espace</h2>
+			<p>Nous allons voir les repères dans l'espace(décomposition d'un vecteur dans l'espace et repérage dans l'espace).</p>
+			<br/>
+			<fieldset>
+				<p>On considère quatre points non coplanaires de l'espace A,B,C et D et un point M de l'espace.</p>
+				<ol>
+					<li>Il existe trois réels \(x\),\(y\) et \(z\) tels que \(\overrightarrow{A M}= x \times \overrightarrow{A B}+ y \times \overrightarrow{A C} +z \times \overrightarrow{A D}\) </li>
+					<li>Ce triplet (\(x\);\(y\);\(z\)) est unique.</li>
+					<li>\(\overrightarrow{O M}= x \times \overrightarrow{i}+ y \times \overrightarrow{j} +z \times \overrightarrow{k}\)</li>
+					<li>(\(x\);\(y\);\(z\)) sont les coordonnées du point M, \(x\) est l'abscisse de M, y est l'ordonnée de M et \(z\) est la côte de M.</li>
+				</ol>	
+			</fieldset>
+			<br/>
+			
+			<hr>
+
+			<a href="#ch8">Revenir en haut de la page</a>
+
+			<h1 id="exo8">Exercices d'application du chapitre 8 :</h1>
+			<form method="post" action="script.php">
+				<ol>
+					<li>
+						<p>Le vecteur \(\overrightarrow{u}=(1,-3,4)\) est-il colinéaire au vecteur \(\overrightarrow{v}=(-3,9,-12)\) ? </p>
+						<input type="radio" name="q1" value="prop1" id="prop1"/>
+						<label for="prop1">OUI</label>
+						<input type="radio" name="q1" value="prop2" id="prop2"/>
+						<label for="prop2">NON</label>
+					</li>
+					<li>
+						<p>Les résultats de géométrie plane peuvent s'appliquer dans chaque plan de l'espace.</p>
+						<input type="radio" name="q2" value="2prop1" id="2prop1"/>
+						<label for="2prop1">VRAI</label>
+						<input type="radio" name="q2" value="2prop2" id="2prop2"/>
+						<label for="2prop2">FAUX</label>
+					</li>
+					<li>
+						<label for="z">Comment s'appelle la troisième coordonnée d'un point de l'espace ?</label>
+						<select name="z" id="z">
+  							<option value="rep1">L'ordonnée</option>
+  							<option value="rep2">L'abscisse</option>
+  							<option value="rep3">La côte</option>
+  						</select>
+					</li>	
+				</ol>
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>OUI</li>
+						<li>VRAI</li>
+						<li>La côte</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

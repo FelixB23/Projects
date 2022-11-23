@@ -1,0 +1,23 @@
+
+#requetes avec jointure pour lier les differentes tables.
+SELECT  prenom,nom
+paiement FROM client INNER JOIN paiement
+USING(client_id)
+WHERE nom LIKE 'B%'
+ORDER BY date_paiement;
+#on selectionne les noms et prenoms des clients ainsi que leurs dates de paiement.
+#on ne prend en compte que les clients dont le nom commence par un B majuscule
+#on retourne les dates par ordre croissants
+
+SELECT moyen_paiement,prenom,nom
+FROM client #table de gauche
+INNER JOIN paiement#table de droite
+USING(client_id)
+ORDER BY prenom;
+#exemple de jointure par la gauche: on selectionne les donnees de la table client meme si un client n'a pas de moyen de paiement( NULL dans la table paiement)
+
+ALTER TABLE produits ADD COLUMN date_mise_en_rayon DATE NOT NULL;
+ #requetes pour table produit
+ SELECT * FROM produits WHERE nom LIKE 'c%' ORDER BY prix DESC ;
+ DELETE FROM produits WHERE nom='croissant';
+ UPDATE produits SET nom='cake_aux_fruits', prix=1.00 WHERE produit_id=18;

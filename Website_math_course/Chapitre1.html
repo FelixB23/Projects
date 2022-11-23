@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 1</title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch1"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo1">Exercice chapitre 1</a>
+
+			<h1>Chapitre 1 : Les suites</h1>
+
+			<h2>Definition d'une suite</h2>
+			<fieldset> <!-- On utilise le langage LaTeX entre les balises \( et \) -->
+				<p>Une suite \(u\) ou \({\displaystyle (u_{n})_{n \in \mathbb{N} }}\) est une <strong>fonction</strong> de \(\mathbb{N}\) dans \(\mathbb{R}\) : \(n \mapsto u(n)\). L'image \(u(n)\) du nombre entier naturel \(n\) par la suite \(u\), est notée \(u_{n}\). On peut définir une suite...</p>
+				<ul>
+					<li>au moyen d'une fonction \(f\) de la variable n : \(u(n) = f(n)\). <strong>C'est la définition explicite.</strong></li>
+					<li>par la donnée de son premier terme et d'une relation de récurrence permettant de calculer un terme à partir d'un ou plusieurs termes précédent. <strong>C'est la définition par récurrence.</strong></li>
+				</ul>
+			</fieldset>
+			<p> Une suite \({\displaystyle (u_{n})_{n \in \mathbb{N} }}\) est :</p>
+			<ul>
+				<li>croissante si et seulement si, \(\forall n \in \mathbb {N},u_{n+1} \ge u_{n}\)</li>
+				<li>décroissante si et seulement si, \(\forall n \in \mathbb {N},u_{n+1} \le u_{n}\)</li>
+				<li>constante si et seulement si, \(\forall n \in \mathbb {N},u_{n+1} = u_{n}\)</li>
+			</ul>
+
+			<h2>Les suites arithmétiques</h2>
+			<fieldset>
+				<p>Une suite est dite <strong>arithmétique</strong> lorsque chaque terme se déduit du précédent en ajoutant une constante \(r\), appelée la <strong>raison</strong>. La suite est <strong>croissante</strong> si \(r \ge 0\), et décroissante si \(r \le 0\).</p>
+				<ul>
+					<li>Définition par récurrence : \(\forall n \in \mathbb{N},~ u_{n+1} = u_{n} + r\).</li>
+					<li>Définition explicite : \(\forall n, p \in \mathbb {N},~ u_{n} = u_{p} + (n-p)r\). En particulier \(u_{n} = u_{0} + nr\).</li>
+				</ul>
+			</fieldset>
+
+			<h2>Les suites géométriques</h2>
+			<fieldset>
+				<p>Une suite est dite <strong>géométrique</strong> lorsque chaque terme se déduit du précédent en multipliant par une constante \(q\), appelée la <strong>raison</strong>. Une suite géométrique de 1<sup>er</sup> terme \(u_{0}>0\) et de raison \(q>0\) est constante si \(q=1\), décroissante si \(q \in ]0,1[\) et croissante si \(q>1\).</p>
+				<ul>
+					<li>Définition par récurrence : \(\forall n \in \mathbb{N},~ u_{n+1} = q \times u_{n}\)</li>
+					<li>Définition explicite : \(\forall n,p \in \mathbb{N},~ u_{n}=u_{p} \times q^{n-p}\). En particulier \(u_{n} = u_{0} \times q^n\).</li>
+				</ul>
+			</fieldset>
+
+			<h2>Calculs de somme</h2>
+			<ul>
+				<li>\({\displaystyle \forall n \in \mathbb{N}, \sum_{k=1}^n k = 1+2+3+...+n = \frac{n(n+1)}{2}}\)</li>
+				<li>Soit \(u_{n}\) une suite arithmétique de premier terme \(u_{0}\) et de raison \(r\), \[{\displaystyle \sum_{k=0}^n u_{k} = u_{0} + u_{1} + ... + u_{n} = (n+1) \times \frac{u_{0}+u_{n}}{2}}\]</li> <!--Lorsqu'on met le code LaTeX entre \[ et \] la formule s'affiche indentée à la ligne d'en dessous-->
+				<li>\({\displaystyle \forall q \ne 1,\forall n \in \mathbb {N}^*,\sum_{k=0}^n q^k = 1 + q + q^2 + ... + q^n = \frac{1-q^{n+1}}{1-q}}\)</li>
+				<li>Soit \(u_{n}\) une suite géométrique de premier terme \(u_{0}\) et de raison \(q\), avec  \(q \ne 1\),
+				\[{\displaystyle \sum_{k=0}^n u_{k} = u_{0} + u_{1} + ... + u_{n} = u_{0} \times \frac{1-q^{n+1}}{1-q}}\]</li>
+			</ul>
+
+			<h2>Raisonnement par récurrence</h2>
+			<p>Si une propriété est vraie au premier rang \(n_{0}\), et s'il est prouvé que lorsqu'elle est vraie pour un entier naturel \(n\ge n_{0}\), elle est aussi vraie pour l'entier \(n+1\), alors elle est vraie pour tous les entiers supérieurs ou égaux à \(n_{0}\). Une démonstration par récurrence se fait donc en 3 étapes :</p>
+			<ol>
+				<li>Initialisation : On vérifie que \(P(n_{0})\) est vraie.</li>
+				<li>Hérédité : On suppose \(P(n)\) vraie pour un entier \(n \ge n_{0}\) puis on démontre que \(P(n+1)\) est vraie.</li>
+				<li>Conclusion : \(P(n)\) est vraie pour tout \(n \ge n_{0}\).</li>
+			</ol>
+
+			<h2>Limite de suite</h2>
+			<p>Une suite converge vers un réel \(l\) si \(\lim_{n \to \infty}u_n = l\). Une suite qui n'est pas convergente est dite divergente.</p>
+			<h3>Propriétés :</h3>
+			<ul>
+				<li>Toute suite constante converge vers la valeur de sa constante.</li>
+				<li>Si la suite \(u_{n}\) converge, alors sa limite est unique.</li>
+				<li>Si \(u_{n}\) converge vers \(l\), les suites \(u_{n+1}\), \(u_{2n}\), \(u_{2n+1}\) convergent également vers \(l\).</li>
+			</ul>
+
+			<h3>Théorèmes de comparaison</h3>
+			<ol>
+				<li>Si à partir d'un certain rang on a \(u_{n} \le v_{n}\) et que \(\lim_{n \to \infty}v_n = l\), alors \(\lim_{n \to \infty}u_n \le l\).</li>
+				<li>Si à partir d'un certain rang on a \(u_{n} \ge v_{n}\) et que \(\lim_{n \to \infty}v_n = l\), alors \(\lim_{n \to \infty}u_n \ge l\).</li>
+				<li>Si à partir d'un certain rang on a \(u_{n} \le v_{n} \le w_{n}\) et que \(u_n\) et \(w_n\) convergent vers \(l\), alors \(v_n\) converge vers \(l\).</li>
+				<li>Si la suite \(u_{n}\) est <strong>majorée</strong>, c'est-à-dire s'il existe \(M\) tel que \(\forall n,~ u_{n} \le M\), et que \(u_{n}\) est <strong>croissante</strong>, alors elle converge.</li>
+				<li>Si la suite \(u_{n}\) est <strong>minorée</strong>, c'est-à-dire s'il existe \(m\) tel que \(\forall n,~ u_{n} \ge m\), et que \(u_{n}\) est <strong>décroissante</strong>, alors elle converge.</li>
+			</ol>
+
+			<hr>
+
+			<a href="#ch1">Revenir en haut de la page</a>
+
+			<h1 id="exo1">Exercices d'application du chapitre 1 :</h1>
+			<form method="post" action="script.php">
+				<p>On considère la suite \(u_{n}\) définie pour tout \(n \in \mathbb N\) par \(u_{n} = 5n + 3 \).</p>
+				<ol>
+					<li>
+						<label for="r">Sa raison est </label><input type="number" name="raison" id="r" min=0 max=10 />
+					</li>
+					<li>
+						<p>En déduire sa formule par récurrence :</p>
+						<input type="radio" name="rec" value="prop1" id="prop1"/>
+						<label for="prop1">\(u_{n+1} = 5u_{n} + 3\)</label>
+						<input type="radio" name="rec" value="prop2" id="prop2"/>
+						<label for="prop2">\(u_{n+1} = 5u_{n}\)</label>
+						<input type="radio" name="rec" value="prop3" id="prop3"/>
+						<label for="prop3">\(u_{n+1} = 3u_{n}\)</label>
+					</li>
+					<li>
+						<p>Soit \(v_{n}\) une suite géométrique de raison \(q = \frac{2}{3}\) et de premier terme \(v_{0} = 2\). Que vaut \({\displaystyle \sum_{k=0}^{n-1} v_{k}}\) ?</p>
+						<input type="radio" name="quest3" value="rep1" id="rep1"/>
+						<label for="rep1">\(6 \times\ (1-\frac{2}{3})^{n-1})\)</label>
+						<input type="radio" name="quest3" value="rep2" id="rep2"/>
+						<label for="rep2">\(2 \times\ (1-\frac{2}{3})^n)\)</label>
+						<input type="radio" name="quest3" value="rep3" id="rep3"/>
+						<label for="rep3">\(6 \times\ (1-(\frac{2}{3})^n)\)</label>
+					</li>
+				</ol>
+
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>r = 5</li>
+						<li>\(u_{n+1} = 5u_{n}\)</li>
+						<li>\({\displaystyle \sum_{k=0}^{n-1} v_{k}} = 6 \times\ (1-(\frac{2}{3})^n)\)</li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

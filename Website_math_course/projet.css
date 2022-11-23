@@ -1,0 +1,172 @@
+body /*Pour toutes les pages*/
+{
+	font-family:monospace,Arial,Verdana;
+	background:rgb(200,200,255);
+	font-size:16px;
+}
+
+/*Decoration pour le menu*/
+.menu
+{
+	display:inline-block; 
+	width:20%;
+	float:left; /*place le menu à gauche*/
+}
+
+.menu table
+{
+	border-collapse:collapse;
+	margin-top:-8px;
+	margin-left:-8px; /*Pour que le menu soit collé en haut a droite*/
+}
+
+.menu td
+{
+	border:solid;
+	color:green;
+	height:50px;
+	text-align:center;
+	background-image:linear-gradient(aqua,yellow);
+	padding:2px;
+
+}
+
+.menu a
+{
+	margin-left:20px;  /*Permet à la case de s'agrandir lorsqu'on passe la souris sur la case*/
+	margin-right:20px; /*et que le texte qui apparait ne passe pas*/
+	text-decoration:none;
+	color:red;
+	font-weight:bold;
+	font-size:22px;
+	letter-spacing:7px;
+}
+
+.menu a:hover
+{
+	border:none;
+	color:red;	
+}
+
+.menu .cache
+{
+	display:none; /*titres des chapitres cachés par défaut*/
+	font-weight:normal;
+	letter-spacing:0;
+}
+
+.menu td:hover .cache
+{
+	display:block; /*passer la souris sur la case fait apparaitre le texte*/
+	margin-bottom:-26px; /*Pour empecher que l'espace sous le nom du chapitre soit trop grand*/				  
+}
+
+/*Decoration pour le reste*/
+.contenu
+{
+	display:inline-block;
+	width:75%;
+	margin-left:14px;
+}
+
+h1
+{
+	color:red;
+	text-shadow:2px 3px 5px rgba(0,0,0,0.3);
+}
+
+h2
+{
+	text-decoration:underline; 
+}
+
+h3
+{
+	font-style:italic
+}
+
+a:hover
+{
+	border:dashed navy 2px;
+	color:brown;
+	text-decoration:none;
+	font-weight:bold;
+	border-radius:15px;
+}
+
+.img:hover
+{
+	border:none; /*pour éviter que l'image hérite du a:hover*/;
+}
+
+table 
+{
+	border-collapse:collapse;
+}
+
+caption
+{
+	font-weight:bold;
+	font-size:20px;
+}
+
+td,th
+{
+	border: 1px solid black;
+	text-align:center;
+	padding:10px;
+}
+
+.aligne li
+{
+	float:left;
+	margin-right:70px;
+}
+
+.image /*div où le texte est à gauche de l'image*/
+{
+	height:300px;
+	width:1000px;
+}
+
+.image img
+{
+	float:right;
+}
+
+.formules /*page chapitre 3*/
+{
+	border:outset;
+}
+
+.formules td, .formules th 
+{
+	padding-right:30px;
+	padding-left:30px;
+	border:none;
+}
+
+/*Partie exercice*/
+
+.casereponse {
+  border:inset red 6px;
+  background-color:yellow; 
+  width:220px;
+  font-size:25px;
+  color:blue;
+  font-weight:bold;
+  display:block;
+  cursor:pointer; 
+}
+
+.reponse {
+  display:none;
+}
+
+#rep {
+  display:none;
+}
+
+#rep:checked + .reponse {
+  display:block;
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<!-- Balises javascript necessaires à l'utilisation du LaTeX pour les formules mathematiques -->
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  		<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<meta charset="UTF-8">
+		<title>Chapitre 2</title>
+		<link href="projet.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="menu">
+			<table id="ch2"><!--id pour revenir en haut de la page-->
+				<tbody>
+					<tr>
+						<td><a href="Accueil.html">Accueil</a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre1.html">Chapitre 1 <span class="cache">Les suites</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre2.html">Chapitre 2 <span class="cache">Limites et continuités de fonctions</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre3.html">Chapitre 3 <span class="cache">Fonctions trigonométriques</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre4.html">Chapitre 4 <span class="cache">Fonction exponentielle</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre5.html">Chapitre 5 <span class="cache">Fonction logarithme</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre6.html">Chapitre 6 <span class="cache">Nombres complexes</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre7.html">Chapitre 7 <span class="cache">Calcul intégral</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre8.html">Chapitre 8 <span class="cache">Géométrie dans l'espace</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre9.html">Chapitre 9 <span class="cache">Probabilités</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Chapitre10.html">Chapitre 10 <span class="cache">Échantillonnage</span></a></td>
+					</tr>
+					<tr>
+						<td><a href="Bac.html">Aide pour le bac</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="contenu">
+
+			<a href="#exo2">Exercice chapitre 2</a>
+
+			<h1>Chapitre 2 :Limites et continuités de fonctions</h1>
+
+			<h2>Définition</h2>
+			<fieldset>
+				<p>On prend \(f\) une fonction qui est définie sur un intervalle I et \(a\) un réel qui appartient à I.</p>
+				<ul>
+					<li> \(f\) est continue en \(a\) \(\Leftrightarrow\) \(\lim_{x \to a}f(x)=f(a)\).</li>
+					<li> \(f\) est continue sur I veut dire qu'elle est continue en tout nombre réel de \(a\) de I.</li>
+				</ul>
+			</fieldset>
+			<p> Il est possible de tracer la courbe représentative de la fonction sans lever le crayon.</p>
+			<h3>Exemples de fonctions continues</h3>
+			<fieldset>
+			<ul>
+				<li>Les fonctions polynômes et la fonction valeur absolue sont des fonctions continues sur l'ensemble des réels.</li>
+				<li> La fonction racine carrée est continue sur l'ensemble des réels positifs ou nuls. </li>
+				<li>La fonction inverse est continue sur l'ensemble des réels strictement positifs et sur l'ensemble des réels strictement négatifs.</li>
+			</ul>
+			</fieldset>
+
+			<h2> Opérations sur les fonctions continues</h2>
+			<fieldset>
+				<p>On considère deux fonctions \(u\) et \(v\) continues sur un intervalle I .</p>
+				<ul>
+					<li> \(u\)+\(v\), \(u^n\), \(u \times v\) sont des fonctions continues.</li>
+					<li>\(\displaystyle {1 \over v}\) et \(\displaystyle {u \over v}\) sont des fonctions continues. </li>
+				</ul>
+			</fieldset>
+			<p> Nous allons énoncer un théorème fondamental qui concerne les fonctions continues.</p>
+			<fieldset>
+				<h3>Theorème des valeurs intermédiaires(admis):</h3>
+				<p>On considère une fonction \(f\) continue sur un intervalle I.</p>
+				<p>\(a\) et \(b\) sont deux nombres réels de I.</p>
+				<p>Pour tout nombre réel k compris entre \(f(a)\) et \(f(b)\), </p>
+				<p>il existe au moins un réel \(c\) compris entre \(a\) et \(b\) tel que \(f(x)=k\).</p><br/>
+				<p>Ce théorème est essentiel, il permet d'étudier des équations que l'on ne sait pas résoudre.</p>
+			</fieldset>
+			<h2>Limites de fonctions</h2>
+			<fieldset>
+				<ul>
+					<li> \(f\) a pour limite \(+\infty\) en \(+\infty\) si les images peuvent être aussi grandes que l'on souhaite. On note \(\lim_{x \to +\infty}f(x)=+\infty\).</li>
+					<li> \(f\) a pour limite \(-\infty\) en \(+\infty\) si les images peuvent être aussi petites que l'on souhaite. On note \(\lim_{x \to +\infty}f(x)=-\infty\).</li>
+					<li>Soit \(l\) un réel. \(f\) a pour limite le réel \(l\) quand \(x\) tend vers \(+\infty\) si les images \(f(x)\) peuvent être aussi proches que l'on souhaite de \(l\). On note \(\lim_{x \to +\infty}f(x)=l\).</li>
+					<li> La droite d'équation \(y=l\) est une asymptote horizontale à la courbe représentative de \(f\) en \(+\infty\) ou en \(-\infty\) \(\Leftrightarrow\) \(\lim_{x \to +\infty}f(x)=l\) ou \(\lim_{x \to -\infty}f(x)=l\).</li>
+					<li> La droite d'équation \(x=a\) est une asymptote verticale à la courbe représentative de \(f\) en \(a\)  \(\Leftrightarrow\) \(\lim_{x \to a}f(x)=+\infty\) ou \(\lim_{x \to a}f(x)=-\infty\).</li>
+					<li>On peut également définir la notion de limite infinie en un point, \(f\) admet comme limite \(+\infty\) quand \(x\) tend vers \(a\) si les images de la fonction peuvent devenir aussi grandes que l'on souhaite si on prend \(x\) assez proche de \(a\). On note \(\lim_{x \to a}f(x)=+\infty\). </li>
+				</ul>
+			</fieldset>
+			<p>Nous allons résumer les différentes opérations sur les limites et les résultats associés : </p><br/>
+			<table >
+				<caption>Somme</caption>
+				<tbody>
+					<tr>
+						<td>Si \(\lim f=\)</td>
+						<td>\(l\)</td>
+						<td>\(l\)</td>
+						<td>\(l\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(+\infty\)</td>
+					</tr>
+					<tr>
+						<td>et \(\lim g=\)</td>
+						<td>\(l'\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(-\infty\)</td>
+					</tr>
+					<tr>
+						<td>Alors \(\lim (f+g)=\)</td>
+						<td>\(l+l'\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>Forme indéterminée</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br/><br/>
+
+			<table>
+				<caption>Produit</caption>
+				<tbody>
+					<tr>
+						<td>Si \(\lim f=\)</td>
+						<td>\(l\)</td>
+						<td>\(l \gt 0\) ou \(+\infty\)</td>
+						<td>\(l \lt 0\) ou \(-\infty\)</td>
+						<td>\(l \gt 0\) ou \(+\infty\)</td>
+						<td>\(l \lt 0\) ou \(-\infty\)</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>et \(\lim g=\)</td>
+						<td>\(l'\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(+\infty\) ou \(-\infty\)</td>
+					</tr>
+					<tr>
+						<td>Alors \(\lim(f \times g)=\)</td>
+						<td>\(l \times l'\)</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(+\infty\)</td>
+						<td>Forme indéterminée</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br/> <br/>
+
+			<table >
+				<caption>Quotient</caption>
+				<tbody>
+					<tr>
+						<td>Si \(\lim f=\)</td>
+						<td>\(l\)</td>
+						<td>\(l\)</td>
+						<td>\(l \gt 0\)</td>
+						<td>\(l \gt 0\)</td>
+						<td>\(l \lt 0\)</td>
+						<td>\(l \lt 0\)</td>
+						<td>\(+\infty\) ou \(-\infty\)</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>et \(\lim g=\)</td>
+						<td>\(l' \ne 0\)</td>
+						<td>\(+\infty\) ou \(-\infty\)</td>
+						<td>\(0\) et \(g \gt 0\)</td>
+						<td>\(0\) et \(g \lt 0\)</td>
+						<td>\(0\) et \(g \gt 0\)</td>
+						<td>\(0\) et \(g \lt 0\)</td>
+						<td>\(+\infty\) ou \(-\infty\)</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Alors \(\displaystyle \lim (\frac{f}{g})=\)</td>
+						<td>\(\displaystyle \frac{l}{l'}\)</td>
+						<td>0</td>
+						<td>\(+\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(-\infty\)</td>
+						<td>\(+\infty\)</td>
+						<td>Forme indéterminée</td>
+						<td>Forme indéterminée</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<br/>
+
+			<fieldset>
+				<p>Il existe quatre formes indéterminées(FI):</p>
+				<ul class="aligne">
+					<li>\(\infty-\infty\)</li>
+					<li>\(0 \times \infty \)</li>
+					<li>\(\displaystyle \frac{\infty}{\infty}\)</li>
+					<li>\(\displaystyle \frac{0}{0}\)</li>
+				</ul>	
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>Une fonction polynôme a même limite en \(-\infty\) et en \(+\infty\) que son terme de plus haut degré. </p>
+				<p>Une fonction rationnelle a même limite en \(-\infty\) et en \(+\infty\) que le quotient des termes de plus haut degré de son numérateur et de son dénominateur. </p>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>On prend \(u\) et \(v\) deux fonctions et on considère \(f\) la composée de \(u\) suivie de \(v\).</p>
+				<p>On prend \(a\),\(b\) et \(c\) des réels. On peut aussi prendre \(+\infty\) ou \(-\infty\).</p>
+				<p>Si \(\lim_{x \to a}u(x)=b\) et \(\lim_{x \to b}v(X)=c\).</p>
+				<p> Alors on peut en conclure que \(\lim_{x \to a}f(x)=c\).</p>
+			</fieldset>
+			<br/>
+			<fieldset>
+				<p>On considère deux fonctions \(f\) et \(g\) avec \(f(x) \le g(x) \).</p>
+				<p>Si \(\lim_{x \to +\infty}f(x)=+\infty\), alors on a \(\lim_{x \to +\infty}g(x)=+\infty\). </p>
+				<p>Si \(\lim_{x \to +\infty}g(x)=-\infty\), alors on a \(\lim_{x \to +\infty}f(x)=-\infty\). </p>
+			</fieldset>
+			<br/><br/>
+			<fieldset>
+				<p>On prend trois fonctions \(f\),\(g\) et \(h\).</p>
+				<p> On doit avoir \(f(x) \le g(x) \le h(x)\).</p>
+				<p>Si \(\lim_{x \to +\infty}f(x)=l\) et \(\lim_{x \to +\infty}h(x)=l\), alors on peut en conclure que \(\lim_{x \to +\infty}g(x)=l\).</p>
+			</fieldset>
+
+			<br/><br/>
+
+			<fieldset>
+				<p>Voici quelques limites de référence à connaître et quelques résultats utiles : </p>
+				<ul class="aligne">
+					<li> \(\lim_{x \to -\infty}x^2=+\infty\)</li>
+					<li>\(\lim_{x \to +\infty}x^2=+\infty\)</li>
+				</ul>				
+				<ul>
+					<li>\(\lim_{x \to +\infty}\sqrt{x}=+\infty\)</li>
+					<li>Pour tout entier \(p \ge 1\), \(\lim_{x \to +\infty}x^p=+\infty\). </li>
+					<li>\(\lim_{x \to -\infty}x^p=+\infty\) si \(p\) est pair.</li>
+					<li>\(\lim_{x \to -\infty}x^p=-\infty\) si \(p\) est impair.</li>
+				</ul>
+				<ul class="aligne">
+					<li>\(\lim_{x \to -\infty} \displaystyle \left ( \frac{1}{x} \right )=0\)</li>
+				</ul>
+				<ul>
+					<li>\(\lim_{x \to +\infty}\left (\displaystyle  \frac{1}{x} \right )=0\)</li>
+					<li>On peut en conclure que l'axe des abscisses est une asymptote horizontale à l'hyperbole en \(+\infty\) et \(-\infty\).</li>
+					<li>On peut également retenir que l'axe des ordonnées est une asymptote verticale à courbe représentative de la fonction inverse.</li>
+					<li>On parle de limite à gauche de \(a\) quand on fait tendre \(x\) vers \(a\) par valeurs inférieures à \(a\).</li>
+					<li>On parle de limite à droite de \(a\) quand on fait tendre \(x\) vers \(a\) par valeurs supérieures à \(a\).</li>
+				</ul>	
+			</fieldset>
+			
+			<hr>
+
+			<a href="#ch2">Revenir en haut de la page</a>
+
+			<h1 id="exo2">Exercices d'application du chapitre 2 :</h1>
+			<form method="post" action="script.php">
+				<p>On considère la fonction définie par  \(f(x)=\displaystyle \frac{cos(x)}{x}\). </p>
+				<ol>
+					<li>
+						<p>Quel théorème doit on appliquer pour calculer sa limite en \(+\infty\) ?</p>
+						<input type="radio" name="q1" value="prop1" id="prop1"/>
+						<label for="prop1">Le théorème des valeurs intermédiaires</label>
+						<input type="radio" name="q1" value="prop2" id="prop2"/>
+						<label for="prop2">Le théorème de Pythagore</label>
+						<input type="radio" name="q1" value="prop3" id="prop3"/>
+						<label for="prop3">Le théorème des gendarmes</label>
+					</li>
+					<li>
+						<p>Que vaut cette limite ? </p>
+						<input type="radio" name="q2" value="2prop1" id="2prop1"/>
+						<label for="2prop1">1</label>
+						<input type="radio" name="q2" value="2prop2" id="2prop2"/>
+						<label for="2prop2">\(+\infty\)</label>
+						<input type="radio" name="q2" value="2prop3" id="2prop3"/>
+						<label for="2prop3">0</label>
+					</li>
+					<li>
+						<p>Il est possible d'appliquer le théorème des valeurs intermédiaires sur des fonctions qui ne sont pas continues.</p>
+						<input type="radio" name="q3" value="3rep1" id="3rep1"/>
+						<label for="3rep1">VRAI</label>
+						<input type="radio" name="q3" value="3rep2" id="3rep2"/>
+						<label for="3rep2">FAUX</label>
+					</li>
+					<li>
+						<p>Grâce au TVI(théorème des valeurs intermédiaires) on peut étudier le nombre de solutions d'une équation que l'on ne sait pas résoudre. Cette affirmation est-elle vraie ou fausse ?</p>
+						<input type="radio" name="quest4" value="4rep1" id="4rep1"/>
+						<label for="4rep1">VRAI</label>
+						<input type="radio" name="quest4" value="4rep2" id="4rep2"/>
+						<label for="4rep2">FAUX</label>
+					</li>
+					<li>
+						<p>Combien existe t-il de formes indéterminées?</p>
+						<label for="fi">Choisir un entier entre 0 et 10 </label>
+						<input type="number" name="fi" max="10"
+						min="0" id="fi"/>
+					</li>
+				</ol>
+
+				<label class="casereponse" for="rep">Cliquez ici pour voir les réponses &#9660;</label>
+				<input id="rep" value="rep" type="radio" name="reponse">
+				<div class="reponse">
+					<ol>
+						<li>Le théorème des gendarmes.</li>
+						<li>0.</li>
+						<li>FAUX! C'est possible de l'appliquer uniquement sur des fonctions qui sont continues ! </li>
+						<li>VRAI ! </li>
+						<li>Il existe quatre formes indéterminées. </li>
+					</ol>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
