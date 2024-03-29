@@ -1,0 +1,1 @@
+Pour lancer le jeu d'échecs codé en java, il faut ouvrir le dossier Echecs (avec toutes ses composantes) sur le logiciel IntelliJ IDEA, puis éxecuter le fichier Main situé dans le dossier src.
