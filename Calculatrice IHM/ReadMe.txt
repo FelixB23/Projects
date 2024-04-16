@@ -1,1 +1,0 @@
-Pour ouvrir la calculatrice, il faut lancer Qt creator (version téléchargée : Qt 6.7.0 avec la composante MinGW 11.2.0 64-bit) et ouvrir le fichier Calculatrice.pro, qui doit être dans le même dossier que les autres fichiers, puis exécuter le code.
