@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     bl=false;
     m_coeff = 0;
     m_affine = 0;
+    m_v = ','; //caractere a changer par '.' si le calcul ne prend pas en compte les virgules
 }
 
 MainWindow::~MainWindow()
@@ -155,7 +156,7 @@ void MainWindow::on_begal_clicked()
 
     //recherche de l'operateur
     int i=1; //on part de 1 pour le cas ou le premier caractere serait un -
-    while (i<aff.size() && (isdigit(aff.at(i)) || aff.at(i)==','))
+    while (i<aff.size() && (isdigit(aff.at(i)) || aff.at(i)==m_v))
         i++;
 
     bool div0 = false;
@@ -199,7 +200,7 @@ void MainWindow::on_bpoint_clicked()
     //On accepte le point en debut d'operation
     if (aff.size()==0)
     {
-        m_aff += ",";
+        m_aff += m_v;
         ui->ecran->setText(m_aff);
     }
     else
@@ -209,7 +210,7 @@ void MainWindow::on_bpoint_clicked()
         while (!ok && i>0)
         {
             i--;
-            if (aff.at(i)==',') //point avant le dernier operateur
+            if (aff.at(i)==m_v) //point avant le dernier operateur
                 i = 0; //on sort de la boucle avec ok=false
             else
             {
@@ -220,7 +221,7 @@ void MainWindow::on_bpoint_clicked()
         }
         if (ok)
         {
-            m_aff += ",";
+            m_aff += m_v;
             ui->ecran->setText(m_aff);
         }
     }
@@ -230,7 +231,6 @@ void MainWindow::on_bpoint_clicked()
 //Pour la partie graphique
 void MainWindow::paintEvent(QPaintEvent* e){
     QPainter painter(this);
-    painter.setPen(Qt::white);
     painter.drawText(50,40,QString("Trace de Ax + B :"));
     painter.drawText(65,250,QString("A"));
     painter.drawText(155,250,QString("B"));
@@ -239,39 +239,38 @@ void MainWindow::paintEvent(QPaintEvent* e){
     myline.fillRect(51,51,149,149,QBrush(Qt::white));
     myline.drawLine(125,50,125,200);
     myline.drawLine(50,125,200,125);
-    if (bl)
+    if (bl) //s'exécute lorsqu'on appuie sur Tracer
     {
         float Ax = 50; //Point sur le bord gauche
-        float Ay = 75*m_coeff-m_affine*5+125; //obtenu avec y = ax + b
+        float Ay = 75*m_coeff-m_affine*5+125; //obtenu avec y = a*x + b, 1 unite = 5
 
         if (Ay<50 || Ay>200) //si on depasse du graphe
         {
             Ay = 50; //Point sur le bord du haut
-            Ax = (75-m_affine*5)/m_coeff + 125; //obtenu avec y = ax + b
+            Ax = (75-m_affine*5)/m_coeff + 125; //obtenu avec y = a*x + b
             if (Ax<50 || Ax>200)
             {
                 Ay = 200; //Point sur le bord du bas
-                Ax = (-75-m_affine*5)/m_coeff + 125; //1 unite = 5
+                Ax = (-75-m_affine*5)/m_coeff + 125;
             }
         }
 
         float Bx = 200; //Point sur le bord droit
-        float By = -75*m_coeff-m_affine*5+125; //1 unite = 5
+        float By = -75*m_coeff-m_affine*5+125;
 
         if (By<50 || By>200) //si on depasse du graphe
         {
             By = 200; //Point sur le bord du bas
-            Bx = (-75-m_affine*5)/m_coeff + 125; //1 unite = 5
+            Bx = (-75-m_affine*5)/m_coeff + 125;
             if (Bx<50 || Bx>200) //si on depasse du graphe
             {
                 By = 50; //Point sur le bord du haut
-                Bx = (75-m_affine*5)/m_coeff + 125; //obtenu avec y = ax + b
+                Bx = (75-m_affine*5)/m_coeff + 125;
             }
         }
-
         myline.setPen( QPen(Qt::red, 1) );
-        myline.drawLine(Ax,Ay,Bx,By);
-        bl=false;
+        myline.drawLine(Ax,Ay,Bx,By); //on relie les points
+        bl=false; //permet de retracer une autre courbe apres
     }
 }
 
@@ -289,10 +288,7 @@ void MainWindow::on_affine_textEdited(const QString &affine)
 
 void MainWindow::on_Tracer_clicked()
 {
-
         bl=true;
-        repaint();
-
-
+        repaint(); //rappel la fonction paintEvent
 }
 

@@ -72,5 +72,7 @@ private:
     bool bl; //pour afficher à l'appui du bouton Tracer
     float m_coeff; //A
     float m_affine; //B
+
+    char m_v; //caractere pour la virgule
 };
 #endif // MAINWINDOW_H

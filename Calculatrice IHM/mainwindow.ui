@@ -13,9 +13,6 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <property name="styleSheet">
-   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
-  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="b0">
     <property name="geometry">
@@ -35,7 +32,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -60,7 +56,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -85,7 +80,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -110,7 +104,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -135,7 +128,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -160,7 +152,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -185,7 +176,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -210,7 +200,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -235,7 +224,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -260,7 +248,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -285,7 +272,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -310,7 +296,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -335,7 +320,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -360,7 +344,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -385,7 +368,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -410,7 +392,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -435,7 +416,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
     <property name="text">
@@ -460,7 +440,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
    </widget>
@@ -482,7 +461,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
    </widget>
@@ -504,7 +482,6 @@
     <property name="styleSheet">
      <string notr="true">QPushButton {
 	color: black;
-	background-color: rgb(255, 255, 255);
 }</string>
     </property>
    </widget>
@@ -515,7 +492,7 @@
      <x>0</x>
      <y>0</y>
      <width>442</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
