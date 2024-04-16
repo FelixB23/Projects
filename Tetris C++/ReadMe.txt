@@ -1,1 +1,0 @@
-Pour lancer le jeu, il faut avoir toutes les composantes du fichier Tetris C++ et ouvrir le fichier Tetris.pro avec le logiciel Qt Creator (version téléchargée : Qt 6.7.0 avec la composante MinGW 11.2.0 64-bit).
