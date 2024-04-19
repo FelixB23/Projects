@@ -1,1 +1,2 @@
+Projet réalisé en Java en janvier 2024 lors de la 3ème année du cycle ingénieur "Ingénierie Mathématique et Data Science" à Polytech Clermont.
 Pour lancer le jeu d'échecs codé en java, il faut ouvrir le dossier Echecs (avec toutes ses composantes) sur le logiciel IntelliJ IDEA (version utilisée : 2023.3.2), puis éxecuter le fichier Main situé dans le dossier src. L'enregistrement des scores dans la base de données ne fonctionne que sur les ordinateurs de Polytech, il faut donc cocher "Non" à la section enregistrement des scores dans les paramètres sur les autres ordinateurs.
